@@ -28,7 +28,7 @@
       <Text>Heilige Verwaltung</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_BELIEF_SACRED_ADMINISTRATION_DESCRIPTION" Language="de_DE">
-      <Text>Glauben wird zu einem Werkzeug der Ordnung. Dieser Glaubenssatz ist für einen späteren Stabilitäts- oder Verwaltungseffekt reserviert.</Text>
+      <Text>Tempel gewähren +1 Glauben.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_BELIEF_CHARITABLE_WORKS_NAME" Language="de_DE">
       <Text>Armenfürsorge</Text>
@@ -54,7 +54,7 @@
       <Text>Ordensförderung</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_DESCRIPTION" Language="de_DE">
-      <Text>Unterstützt religiöse Orden. Für einen späteren Effekt zur Umwandlung von Glauben in Handlungskraft reserviert.</Text>
+      <Text>Tempel gewähren +1 Glauben, solange diese Politik eingesetzt ist.</Text>
     </Row>
 
     <!-- Stadtaktionen / Projekte für Glauben -->
