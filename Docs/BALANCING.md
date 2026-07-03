@@ -2,7 +2,7 @@
 
 This document tracks early balancing rules for Sacred Dominion.
 
-The current implementation has active Phase 2 belief and policy effects, Phase 3 Holy Site city projects, and Phase 4 decree policies. Local Civilization VI validation has been skipped for now and remains pending.
+The current implementation has active Phase 2 belief and policy effects, Phase 3 Holy Site city projects, and Phase 4 decree policies. Phase 5 is currently planning-only. Local Civilization VI validation has been skipped for now and remains pending.
 
 ---
 
@@ -62,7 +62,7 @@ Faith should help culture, diplomacy, domination and science strategies, but rel
 
 ### 4. Risks should create choices, not annoyance
 
-Zeal and Schism should add pressure and decision-making later. They should not become random punishment fog.
+Zeal, Schism and Resistance should add pressure and decision-making later. They should not become random punishment fog.
 
 ### 5. AI should survive the system
 
@@ -109,6 +109,18 @@ Phase 4 deliberately avoids tourism, loyalty, unit cost reduction and pressure e
 
 ---
 
+## Phase 5 planning pass
+
+| Axis | German | Purpose | First safe direction later |
+| --- | --- | --- | --- |
+| Zeal | Eifer | active religious energy | policy trade-off or temporary boost |
+| Schism | Spaltung | internal religious division | small drawback from overreach |
+| Resistance | Widerstand | pushback against harsh faith rule | city-level warning or mild penalty |
+
+Phase 5 is not active yet. It is planning only.
+
+---
+
 ## Watchlist
 
 Potential balance dangers:
@@ -123,6 +135,7 @@ Potential balance dangers:
 - too many bonuses stacking on Temple too early
 - decree policies becoming automatic picks
 - decree policies duplicating Phase 2 policy cards too closely
+- tension systems becoming annoying instead of strategic
 
 ---
 
@@ -136,13 +149,14 @@ When testing later, answer:
 - Does the AI spam the projects?
 - Are the policy cards worth using without becoming automatic picks?
 - Do the decree policies feel distinct enough from normal policy cards?
+- Would Zeal and Schism add meaningful choices here or just noise?
 - Are the tooltips clear enough in English and German?
 
 ---
 
 ## Before stronger effects
 
-Do not add stronger loyalty, tourism, cost reduction or pressure effects until:
+Do not add stronger loyalty, tourism, cost reduction, pressure, Zeal or Schism effects until:
 
 - Phase 1 loads cleanly
 - Phase 2 records load cleanly
@@ -167,3 +181,6 @@ After local validation, the temporary safe effects can be refined:
 - Missionary Mandate can later affect pressure or Missionary economy.
 - Mobilize Orders can later support purchase costs if stable.
 - Wonder Veneration can later connect to Wonders or Tourism.
+- Zeal can later amplify strong faith actions.
+- Schism can later add internal risk to overreach.
+- Resistance can later give conquered or pressured cities counterweight.
