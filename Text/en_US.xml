@@ -57,30 +57,30 @@
       <Text>Temples provide +1 Faith while this policy is slotted.</Text>
     </Row>
 
-    <!-- City faith actions / projects -->
+    <!-- Phase 3 city faith actions / projects -->
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_NAME" Language="en_US">
       <Text>Sermon Campaign</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_DESCRIPTION" Language="en_US">
-      <Text>Increases religious pressure from this city for a limited time.</Text>
+      <Text>Holy Site project. Converts Production into Faith.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_CHARITY_NAME" Language="en_US">
       <Text>Charitable Works</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_CHARITY_DESCRIPTION" Language="en_US">
-      <Text>Uses Faith to support the population and improve local stability.</Text>
+      <Text>Holy Site project. Converts Production into Food.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_HOLY_ORDER_NAME" Language="en_US">
       <Text>Holy Order</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_HOLY_ORDER_DESCRIPTION" Language="en_US">
-      <Text>Strengthens loyalty and religious order in this city.</Text>
+      <Text>Holy Site project. Converts Production into Faith and Gold.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_PILGRIMAGE_CENTER_NAME" Language="en_US">
       <Text>Pilgrimage Center</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_PILGRIMAGE_CENTER_DESCRIPTION" Language="en_US">
-      <Text>Turns this city into a local center of pilgrimage, culture and religious influence.</Text>
+      <Text>Holy Site project. Converts Production into Culture and Faith.</Text>
     </Row>
 
     <!-- Decrees -->
