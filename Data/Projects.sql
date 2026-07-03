@@ -4,10 +4,39 @@
 -- Primary language: English
 -- German translation: Text/de_DE.xml
 --
--- Phase 1 placeholder.
--- Future purpose:
--- - add city-based faith actions as projects
--- - add sermon campaigns, charitable works, holy order and pilgrimage center mechanics
--- - connect project names and descriptions through LOC_SACRED_DOMINION_* keys
+-- Phase 3: city faith actions as Holy Site projects.
+--
+-- These projects use existing Civilization VI project systems.
+-- They are intentionally simple and conservative.
+--
+-- Current actions:
+-- - Sermon Campaign: converts production into Faith
+-- - Charitable Works: converts production into Food
+-- - Holy Order: converts production into Faith and Gold
+-- - Pilgrimage Center: converts production into Culture and Faith
 
--- No gameplay changes are applied in Phase 1.
+INSERT OR IGNORE INTO Types
+    (Type, Kind)
+VALUES
+    ('PROJECT_SACRED_DOMINION_SERMON_CAMPAIGN', 'KIND_PROJECT'),
+    ('PROJECT_SACRED_DOMINION_CHARITABLE_WORKS', 'KIND_PROJECT'),
+    ('PROJECT_SACRED_DOMINION_HOLY_ORDER', 'KIND_PROJECT'),
+    ('PROJECT_SACRED_DOMINION_PILGRIMAGE_CENTER', 'KIND_PROJECT');
+
+INSERT OR IGNORE INTO Projects
+    (ProjectType, Name, ShortName, Description, Cost, CostProgressionModel, CostProgressionParam1, UnlocksFromEffect, RequiredBuilding, PrereqDistrict)
+VALUES
+    ('PROJECT_SACRED_DOMINION_SERMON_CAMPAIGN', 'LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_NAME', 'LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_NAME', 'LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_DESCRIPTION', 40, 'COST_PROGRESSION_GAME_PROGRESS', 750, 0, NULL, 'DISTRICT_HOLY_SITE'),
+    ('PROJECT_SACRED_DOMINION_CHARITABLE_WORKS', 'LOC_SACRED_DOMINION_PROJECT_CHARITY_NAME', 'LOC_SACRED_DOMINION_PROJECT_CHARITY_NAME', 'LOC_SACRED_DOMINION_PROJECT_CHARITY_DESCRIPTION', 40, 'COST_PROGRESSION_GAME_PROGRESS', 750, 0, NULL, 'DISTRICT_HOLY_SITE'),
+    ('PROJECT_SACRED_DOMINION_HOLY_ORDER', 'LOC_SACRED_DOMINION_PROJECT_HOLY_ORDER_NAME', 'LOC_SACRED_DOMINION_PROJECT_HOLY_ORDER_NAME', 'LOC_SACRED_DOMINION_PROJECT_HOLY_ORDER_DESCRIPTION', 50, 'COST_PROGRESSION_GAME_PROGRESS', 750, 0, NULL, 'DISTRICT_HOLY_SITE'),
+    ('PROJECT_SACRED_DOMINION_PILGRIMAGE_CENTER', 'LOC_SACRED_DOMINION_PROJECT_PILGRIMAGE_CENTER_NAME', 'LOC_SACRED_DOMINION_PROJECT_PILGRIMAGE_CENTER_NAME', 'LOC_SACRED_DOMINION_PROJECT_PILGRIMAGE_CENTER_DESCRIPTION', 50, 'COST_PROGRESSION_GAME_PROGRESS', 750, 0, NULL, 'DISTRICT_HOLY_SITE');
+
+INSERT OR IGNORE INTO Project_YieldConversions
+    (ProjectType, YieldType, PercentOfProductionRate)
+VALUES
+    ('PROJECT_SACRED_DOMINION_SERMON_CAMPAIGN', 'YIELD_FAITH', 25),
+    ('PROJECT_SACRED_DOMINION_CHARITABLE_WORKS', 'YIELD_FOOD', 25),
+    ('PROJECT_SACRED_DOMINION_HOLY_ORDER', 'YIELD_FAITH', 20),
+    ('PROJECT_SACRED_DOMINION_HOLY_ORDER', 'YIELD_GOLD', 10),
+    ('PROJECT_SACRED_DOMINION_PILGRIMAGE_CENTER', 'YIELD_CULTURE', 20),
+    ('PROJECT_SACRED_DOMINION_PILGRIMAGE_CENTER', 'YIELD_FAITH', 10);
