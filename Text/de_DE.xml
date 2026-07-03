@@ -83,36 +83,36 @@
       <Text>Heilige-Stätte-Projekt. Wandelt Produktion in Kultur und Glauben um.</Text>
     </Row>
 
-    <!-- Dekrete -->
+    <!-- Phase-4-Dekrete als Politikkarten -->
     <Row Tag="LOC_SACRED_DOMINION_DECREE_TITHE_NAME" Language="de_DE">
       <Text>Zehnt ausrufen</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_TITHE_DESCRIPTION" Language="de_DE">
-      <Text>Städte mit deiner Mehrheitsreligion erzeugen zusätzliches Gold.</Text>
+      <Text>Dekret-Politik. Tempel gewähren +1 Gold, solange diese Politik eingesetzt ist.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_HOLY_FESTIVALS_NAME" Language="de_DE">
       <Text>Heilige Feste</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_HOLY_FESTIVALS_DESCRIPTION" Language="de_DE">
-      <Text>Erhöht Kultur, Annehmlichkeiten und Loyalität in Städten, die durch deine Religion geprägt sind.</Text>
+      <Text>Dekret-Politik. Tempel gewähren +1 Kultur, solange diese Politik eingesetzt ist.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_MISSIONARY_MANDATE_NAME" Language="de_DE">
       <Text>Missionsmandat</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_MISSIONARY_MANDATE_DESCRIPTION" Language="de_DE">
-      <Text>Verstärkt den religiösen Druck durch Handelsrouten und religiöse Einheiten.</Text>
+      <Text>Dekret-Politik. Schreine gewähren +1 Glauben, solange diese Politik eingesetzt ist.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_MOBILIZE_ORDERS_NAME" Language="de_DE">
       <Text>Orden mobilisieren</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_MOBILIZE_ORDERS_DESCRIPTION" Language="de_DE">
-      <Text>Senkt die Glaubenskosten ausgewählter religiöser oder militärischer Käufe.</Text>
+      <Text>Dekret-Politik. Tempel gewähren +1 Glauben, solange diese Politik eingesetzt ist.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_WONDER_VENERATION_NAME" Language="de_DE">
       <Text>Wunderverehrung</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_WONDER_VENERATION_DESCRIPTION" Language="de_DE">
-      <Text>Weltwunder und Heilige Stätten erzeugen zusätzlichen Tourismus oder religiösen Einfluss.</Text>
+      <Text>Dekret-Politik. Tempel gewähren +1 Kultur, solange diese Politik eingesetzt ist.</Text>
     </Row>
   </LocalizedText>
 </GameData>
