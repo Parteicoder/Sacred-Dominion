@@ -23,6 +23,40 @@
       <Text>Stellt religiöse Teilung innerhalb von Städten und Reichen dar. Hohe Spaltung kann Loyalität, Annehmlichkeiten oder Stabilität schwächen.</Text>
     </Row>
 
+    <!-- Phase-2-Glaubenssätze -->
+    <Row Tag="LOC_SACRED_DOMINION_BELIEF_SACRED_ADMINISTRATION_NAME" Language="de_DE">
+      <Text>Heilige Verwaltung</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_BELIEF_SACRED_ADMINISTRATION_DESCRIPTION" Language="de_DE">
+      <Text>Glauben wird zu einem Werkzeug der Ordnung. Entwickelt, um Loyalität, Stabilität oder Verwaltungsboni durch religiöse Infrastruktur zu unterstützen.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_BELIEF_CHARITABLE_WORKS_NAME" Language="de_DE">
+      <Text>Armenfürsorge</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_BELIEF_CHARITABLE_WORKS_DESCRIPTION" Language="de_DE">
+      <Text>Infrastruktur Heiliger Stätten unterstützt die Bevölkerung und verwandelt religiöse Investitionen in praktische Stabilität.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_BELIEF_PILGRIMAGE_NETWORK_NAME" Language="de_DE">
+      <Text>Pilgernetzwerk</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_BELIEF_PILGRIMAGE_NETWORK_DESCRIPTION" Language="de_DE">
+      <Text>Religiöse Reisen und verbundene heilige Orte stärken die kulturelle und spirituelle Reichweite deines Reiches.</Text>
+    </Row>
+
+    <!-- Phase-2-Politikkarten -->
+    <Row Tag="LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_NAME" Language="de_DE">
+      <Text>Zehntverwaltung</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_DESCRIPTION" Language="de_DE">
+      <Text>Organisiert religiöse Einnahmen und verwandelt Glaubensinfrastruktur in einen kleinen wirtschaftlichen Vorteil.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_NAME" Language="de_DE">
+      <Text>Ordensförderung</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_DESCRIPTION" Language="de_DE">
+      <Text>Unterstützt religiöse Orden und verbessert die Fähigkeit des Reiches, Glauben in Handlungskraft umzuwandeln.</Text>
+    </Row>
+
     <!-- Stadtaktionen / Projekte für Glauben -->
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_NAME" Language="de_DE">
       <Text>Predigtkampagne</Text>
