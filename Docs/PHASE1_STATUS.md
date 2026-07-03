@@ -12,7 +12,7 @@ Goal: The mod should be recognized by Civilization VI, be activatable in Additio
 
 ## Last completed step
 
-Created `Docs/DESIGN.md` and `Docs/BALANCING.md` so the foundation now has design rules and early balancing guidance.
+Marked the local Civilization VI load test as deferred. Phase 1 implementation is ready, but final completion waits for an in-game test.
 
 ## Current checklist
 
@@ -28,6 +28,14 @@ Created `Docs/DESIGN.md` and `Docs/BALANCING.md` so the foundation now has desig
 - [x] initial balancing document created
 - [x] ready for local Civ VI load test
 - [ ] local Civ VI load test passed
+
+---
+
+## Hold note
+
+The local Civ VI load test will be done later.
+
+Do not mark Phase 1 as 100% complete until the mod has been copied into the local Civ VI Mods folder and checked in-game.
 
 ---
 
