@@ -17,6 +17,7 @@
     <File>Data/Buildings.sql</File>
     <File>Data/Projects.sql</File>
     <File>Data/Modifiers.sql</File>
+    <File>Data/Decrees.sql</File>
   </Files>
 
   <Components>
@@ -34,6 +35,7 @@
         <File>Data/Buildings.sql</File>
         <File>Data/Projects.sql</File>
         <File>Data/Modifiers.sql</File>
+        <File>Data/Decrees.sql</File>
       </Items>
     </UpdateDatabase>
   </Components>
