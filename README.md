@@ -1,6 +1,6 @@
 # Sacred Dominion
 
-**Sacred Dominion** is a faith-focused gameplay rework for *Sid Meier's Civilization VI*.
+**Sacred Dominion** is a faith-focused gameplay rework for Civilization VI.
 
 The mod is built with **English as the primary language** and **German as a full translation**.
 
@@ -17,43 +17,26 @@ Heilige Herrschaft - Glauben neu gedacht
 | Area | Status |
 | --- | --- |
 | Phase 1 - Mod foundation | Ready for local load test |
-| Phase 2 - First active faith mechanics | In progress |
-| Active gameplay effects | 3 small Phase 2 effects implemented |
+| Phase 2 - First active faith mechanics | Effect pass implemented, local test pending |
+| Active gameplay effects | 5 small Phase 2 effects implemented |
 | Primary language | English |
 | German translation | Supported |
 | Custom UI | Not started |
 | Local Civ VI test | Pending |
 
-Phase 1 is structurally ready, but it is not marked as fully complete until the mod has been copied into the local Civilization VI Mods folder and tested in-game.
+Phase 1 is structurally ready, but it is not marked as fully complete until the mod has been tested locally in Civilization VI.
 
-Phase 2 now includes the first active gameplay modifiers. These effects are intentionally small, conservative and easy to debug.
-
----
-
-## What Sacred Dominion does
-
-Civilization VI often treats Faith as a strong but specialized resource. Without a religious victory plan, specific beliefs, Monumentality, Naturalists, Rock Bands or certain civilization abilities, Faith can feel passive.
-
-Sacred Dominion turns Faith into a more active empire-management tool:
-
-- religious infrastructure matters outside pure religious victory
-- Faith-related choices support economy, food and culture
-- future phases will add deeper systems such as decrees, city actions, Zeal and Schism
-- custom UI comes later, after the gameplay foundation is stable
-
-The design goal is not to make Faith a second version of Gold. Faith should feel like religious authority, cultural legitimacy, social support and political pressure.
+Phase 2 now includes conservative gameplay modifiers for all five initial Phase 2 records. These effects are intentionally small and easy to test.
 
 ---
 
 ## Active Phase 2 mechanics
 
-The first gameplay pass adds three small effects.
+### Sacred Administration
 
-### Tithe Administration
-
-**Type:** Economic policy card  
-**German:** Zehntverwaltung  
-**Current effect:** Temples provide **+1 Gold** while this policy is slotted.
+**Type:** Belief  
+**German:** Heilige Verwaltung  
+**Current effect:** Temples provide **+1 Faith**.
 
 ### Charitable Works
 
@@ -67,23 +50,30 @@ The first gameplay pass adds three small effects.
 **German:** Pilgernetzwerk  
 **Current effect:** Temples provide **+1 Culture**.
 
----
+### Tithe Administration
 
-## Phase 2 records reserved for later effects
-
-These records exist and are localized, but their gameplay effects are intentionally reserved for a later pass.
-
-### Sacred Administration
-
-**Type:** Belief  
-**German:** Heilige Verwaltung  
-**Planned direction:** stability, loyalty or administrative yield support.
+**Type:** Economic policy card  
+**German:** Zehntverwaltung  
+**Current effect:** Temples provide **+1 Gold** while this policy is slotted.
 
 ### Order Patronage
 
 **Type:** Economic policy card  
 **German:** Ordensförderung  
-**Planned direction:** Faith-to-action support, religious order support or a conservative Faith bonus.
+**Current effect:** Temples provide **+1 Faith** while this policy is slotted.
+
+---
+
+## Project goal
+
+Sacred Dominion makes Faith more active outside a pure religious victory path.
+
+The design direction:
+
+- religious infrastructure should matter more
+- Faith should support economy, food, culture and empire management
+- deeper systems such as city faith actions, decrees, Zeal and Schism come later
+- custom UI comes after the gameplay foundation is stable
 
 ---
 
@@ -97,8 +87,6 @@ Docs/ROADMAP.md
 
 ### Phase 1 - Mod foundation
 
-Goal: Civilization VI recognizes and loads the mod.
-
 Status:
 
 - `.modinfo` exists
@@ -109,26 +97,13 @@ Status:
 
 ### Phase 2 - First active faith mechanics
 
-Goal: Make Faith more useful through existing Civ VI systems before custom UI work begins.
-
 Status:
 
 - 3 belief records exist
 - 2 policy records exist
 - English and German localization exist
-- 3 conservative effects are implemented
+- 5 conservative effects are implemented
 - local SQL/load test still pending
-
-### Later phases
-
-Planned future systems:
-
-- city-based faith actions
-- empire-wide sacred decrees
-- Zeal and Schism as risk/reward systems
-- expanded religious unit roles
-- custom UI and faith overview
-- balance and Workshop release polish
 
 ---
 
@@ -207,7 +182,7 @@ Lua.log
 
 ## Current technical caution
 
-The first Phase 2 effects are implemented, but not yet verified in a local Civ VI install.
+The first Phase 2 effect pass is implemented, but not yet verified in a local Civ VI install.
 
 Before adding more complex systems, test that:
 
@@ -216,11 +191,3 @@ Before adding more complex systems, test that:
 - the new belief and policy records load
 - the new tooltips appear correctly
 - the first modifiers do not create database errors
-
----
-
-## Fan project notice
-
-This is an unofficial fan project for *Sid Meier's Civilization VI*.
-
-Civilization, Civilization VI and Sid Meier's Civilization VI are trademarks of their respective owners. This project is not affiliated with Firaxis Games, 2K Games or Take-Two Interactive.
