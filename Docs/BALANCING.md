@@ -2,7 +2,7 @@
 
 This document tracks early balancing rules for Sacred Dominion.
 
-The current implementation has active Phase 2 belief and policy effects plus Phase 3 Holy Site city projects. Local Civilization VI validation is still pending.
+The current implementation has active Phase 2 belief and policy effects, Phase 3 Holy Site city projects, and Phase 4 decree policies. Local Civilization VI validation has been skipped for now and remains pending.
 
 ---
 
@@ -62,7 +62,7 @@ Faith should help culture, diplomacy, domination and science strategies, but rel
 
 ### 4. Risks should create choices, not annoyance
 
-Zeal and Schism should add pressure and decision-making later. They should not become a random punishment fog.
+Zeal and Schism should add pressure and decision-making later. They should not become random punishment fog.
 
 ### 5. AI should survive the system
 
@@ -80,8 +80,6 @@ Early versions should use mechanics the AI can at least passively benefit from.
 | Tithe Administration | Policy | Temples +1 Gold while slotted | modest economy card |
 | Order Patronage | Policy | Temples +1 Faith while slotted | modest faith card |
 
-These are intentionally low numbers. They are first-pass effects, not final fantasy cathedral machinery.
-
 ---
 
 ## Active Phase 3 project pass
@@ -97,6 +95,20 @@ Phase 3 projects should feel like optional local actions, not mandatory build qu
 
 ---
 
+## Active Phase 4 decree pass
+
+| Decree policy | Current effect | Balance intent |
+| --- | --- | --- |
+| Declare Tithe | Temples +1 Gold while slotted | small empire economy lever |
+| Holy Festivals | Temples +1 Culture while slotted | culture celebration without tourism spike |
+| Missionary Mandate | Shrines +1 Faith while slotted | early faith push |
+| Mobilize Orders | Temples +1 Faith while slotted | conservative order mobilization |
+| Wonder Veneration | Temples +1 Culture while slotted | safe placeholder before wonder/tourism logic |
+
+Phase 4 deliberately avoids tourism, loyalty, unit cost reduction and pressure effects for now.
+
+---
+
 ## Watchlist
 
 Potential balance dangers:
@@ -109,18 +121,21 @@ Potential balance dangers:
 - AI not understanding new systems
 - project yields becoming stronger than normal district projects
 - too many bonuses stacking on Temple too early
+- decree policies becoming automatic picks
+- decree policies duplicating Phase 2 policy cards too closely
 
 ---
 
-## Local test balance questions
+## Test balance questions
 
-When testing Phase 2 and Phase 3, answer:
+When testing later, answer:
 
 - Do the Temple bonuses feel too stacked?
 - Does Charitable Works create too much early growth?
 - Do the new projects appear too early or too often?
 - Does the AI spam the projects?
 - Are the policy cards worth using without becoming automatic picks?
+- Do the decree policies feel distinct enough from normal policy cards?
 - Are the tooltips clear enough in English and German?
 
 ---
@@ -133,6 +148,7 @@ Do not add stronger loyalty, tourism, cost reduction or pressure effects until:
 - Phase 2 records load cleanly
 - Phase 2 modifiers load cleanly
 - Phase 3 projects appear correctly
+- Phase 4 decree policies load cleanly
 - logs are clean
 
 ---
@@ -146,3 +162,8 @@ After local validation, the temporary safe effects can be refined:
 - Pilgrimage Network can move toward trade routes, tourism or pressure.
 - Holy Order can later gain a real order/stability identity.
 - Charitable Works can later use Amenities or Housing if stable.
+- Declare Tithe can later use follower cities or religion pressure.
+- Holy Festivals can later use Amenities or temporary Culture.
+- Missionary Mandate can later affect pressure or Missionary economy.
+- Mobilize Orders can later support purchase costs if stable.
+- Wonder Veneration can later connect to Wonders or Tourism.
