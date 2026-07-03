@@ -28,7 +28,7 @@
       <Text>Sacred Administration</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_BELIEF_SACRED_ADMINISTRATION_DESCRIPTION" Language="en_US">
-      <Text>Faith becomes a tool of order. This belief is reserved for a later stability or administration effect.</Text>
+      <Text>Temples provide +1 Faith.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_BELIEF_CHARITABLE_WORKS_NAME" Language="en_US">
       <Text>Charitable Works</Text>
@@ -54,7 +54,7 @@
       <Text>Order Patronage</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_DESCRIPTION" Language="en_US">
-      <Text>Supports religious orders. Reserved for a later Faith-to-action effect.</Text>
+      <Text>Temples provide +1 Faith while this policy is slotted.</Text>
     </Row>
 
     <!-- City faith actions / projects -->
