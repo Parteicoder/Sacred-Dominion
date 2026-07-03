@@ -10,11 +10,11 @@ No gameplay SQL is active in this phase yet.
 
 ## Progress
 
-**Overall progress:** 80%
+**Overall progress:** 88%
 
 ## Last completed step
 
-Selected the first later implementation direction and added the Phase 5 test checklist.
+Added Resistance localization in English and German and created the Phase 5 localization notes.
 
 ## Current checklist
 
@@ -28,6 +28,10 @@ Selected the first later implementation direction and added the Phase 5 test che
 - [x] balancing notes updated
 - [x] first safe gameplay implementation selected
 - [x] Phase 5 test checklist created
+- [x] Zeal localization checked
+- [x] Schism localization checked
+- [x] Resistance localization added
+- [x] Phase 5 localization notes created
 - [ ] local Civ VI test passed
 - [ ] first gameplay SQL implemented
 
@@ -69,9 +73,12 @@ Docs/PHASE5_MECHANICS.md
 Docs/PHASE5_IMPLEMENTATION_BOUNDARIES.md
 Docs/PHASE5_FIRST_IMPLEMENTATION.md
 Docs/PHASE5_TEST.md
+Docs/PHASE5_LOCALIZATION.md
 Docs/BALANCING.md
 Docs/ROADMAP.md
 README.md
+Text/en_US.xml
+Text/de_DE.xml
 ```
 
 ---
