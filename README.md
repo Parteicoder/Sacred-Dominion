@@ -18,7 +18,8 @@ Heilige Herrschaft - Glauben neu gedacht
 | --- | --- |
 | Phase 1 - Mod foundation | Ready for local load test |
 | Phase 2 - First active faith mechanics | Effect pass implemented, local test pending |
-| Active gameplay effects | 5 small Phase 2 effects implemented |
+| Phase 3 - City faith actions | First project pass implemented, local test pending |
+| Active gameplay effects | 5 Phase 2 effects and 4 Phase 3 city projects |
 | Primary language | English |
 | German translation | Supported |
 | Custom UI | Not started |
@@ -26,7 +27,9 @@ Heilige Herrschaft - Glauben neu gedacht
 
 Phase 1 is structurally ready, but it is not marked as fully complete until the mod has been tested locally in Civilization VI.
 
-Phase 2 now includes conservative gameplay modifiers for all five initial Phase 2 records. These effects are intentionally small and easy to test.
+Phase 2 includes conservative gameplay modifiers for all five initial Phase 2 records.
+
+Phase 3 adds the first city-based faith actions as Holy Site projects.
 
 ---
 
@@ -64,6 +67,34 @@ Phase 2 now includes conservative gameplay modifiers for all five initial Phase 
 
 ---
 
+## Active Phase 3 city projects
+
+### Sermon Campaign
+
+**German:** Predigtkampagne  
+**Requirement:** Holy Site  
+**Current effect:** Converts Production into **Faith**.
+
+### Charitable Works
+
+**German:** Armenfürsorge  
+**Requirement:** Holy Site  
+**Current effect:** Converts Production into **Food**.
+
+### Holy Order
+
+**German:** Heilige Ordnung  
+**Requirement:** Holy Site  
+**Current effect:** Converts Production into **Faith** and **Gold**.
+
+### Pilgrimage Center
+
+**German:** Pilgerzentrum  
+**Requirement:** Holy Site  
+**Current effect:** Converts Production into **Culture** and **Faith**.
+
+---
+
 ## Project goal
 
 Sacred Dominion makes Faith more active outside a pure religious victory path.
@@ -72,7 +103,8 @@ The design direction:
 
 - religious infrastructure should matter more
 - Faith should support economy, food, culture and empire management
-- deeper systems such as city faith actions, decrees, Zeal and Schism come later
+- city-level faith actions should become regular local decisions
+- deeper systems such as decrees, Zeal and Schism come later
 - custom UI comes after the gameplay foundation is stable
 
 ---
@@ -105,6 +137,15 @@ Status:
 - 5 conservative effects are implemented
 - local SQL/load test still pending
 
+### Phase 3 - City faith actions
+
+Status:
+
+- 4 Holy Site city projects exist
+- English and German localization exist
+- project yield conversions are implemented
+- local SQL/load test still pending
+
 ---
 
 ## Repository structure
@@ -132,6 +173,9 @@ Sacred-Dominion/
     ├── PHASE2_MODIFIERS.md
     ├── PHASE2_STATUS.md
     ├── PHASE2_TEST.md
+    ├── PHASE3_MECHANICS.md
+    ├── PHASE3_STATUS.md
+    ├── PHASE3_TEST.md
     └── ROADMAP.md
 ```
 
@@ -160,13 +204,14 @@ Text/de_DE.xml
 
 ## Local test notes
 
-Phase 1 and Phase 2 still need local Civilization VI validation.
+Phase 1, Phase 2 and Phase 3 still need local Civilization VI validation.
 
 Useful documents:
 
 ```text
 Docs/LOAD_TEST.md
 Docs/PHASE2_TEST.md
+Docs/PHASE3_TEST.md
 ```
 
 Important logs to check after loading the mod locally:
@@ -182,12 +227,13 @@ Lua.log
 
 ## Current technical caution
 
-The first Phase 2 effect pass is implemented, but not yet verified in a local Civ VI install.
+Phase 3 project SQL is implemented, but not yet verified in a local Civ VI install.
 
 Before adding more complex systems, test that:
 
 - the mod appears in Additional Content
 - a new game starts
-- the new belief and policy records load
+- the Phase 2 belief and policy records load
+- the Phase 3 city projects appear in cities with Holy Sites
 - the new tooltips appear correctly
-- the first modifiers do not create database errors
+- the first modifiers and projects do not create database errors
