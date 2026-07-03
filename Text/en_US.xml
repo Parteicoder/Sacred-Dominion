@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+    <!-- Mod metadata -->
+    <Row Tag="LOC_SACRED_DOMINION_NAME" Language="en_US">
+      <Text>Sacred Dominion</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DESCRIPTION" Language="en_US">
+      <Text>A faith rework for Civilization VI that turns Faith into an active resource for rule, stability, culture and religious pressure.</Text>
+    </Row>
+
+    <!-- Core concepts -->
+    <Row Tag="LOC_SACRED_DOMINION_CONCEPT_ZEAL_NAME" Language="en_US">
+      <Text>Zeal</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_CONCEPT_ZEAL_DESCRIPTION" Language="en_US">
+      <Text>Represents the active religious energy of your empire. High Zeal can strengthen faith-based effects, but may also increase religious tension.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_CONCEPT_SCHISM_NAME" Language="en_US">
+      <Text>Schism</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_CONCEPT_SCHISM_DESCRIPTION" Language="en_US">
+      <Text>Represents religious division inside cities and empires. High Schism may weaken loyalty, amenities or stability.</Text>
+    </Row>
+
+    <!-- City faith actions / projects -->
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_NAME" Language="en_US">
+      <Text>Sermon Campaign</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_DESCRIPTION" Language="en_US">
+      <Text>Increases religious pressure from this city for a limited time.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_CHARITY_NAME" Language="en_US">
+      <Text>Charitable Works</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_CHARITY_DESCRIPTION" Language="en_US">
+      <Text>Uses Faith to support the population and improve local stability.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_HOLY_ORDER_NAME" Language="en_US">
+      <Text>Holy Order</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_HOLY_ORDER_DESCRIPTION" Language="en_US">
+      <Text>Strengthens loyalty and religious order in this city.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_PILGRIMAGE_CENTER_NAME" Language="en_US">
+      <Text>Pilgrimage Center</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_PILGRIMAGE_CENTER_DESCRIPTION" Language="en_US">
+      <Text>Turns this city into a local center of pilgrimage, culture and religious influence.</Text>
+    </Row>
+
+    <!-- Decrees -->
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_TITHE_NAME" Language="en_US">
+      <Text>Declare Tithe</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_TITHE_DESCRIPTION" Language="en_US">
+      <Text>Cities following your majority religion generate additional Gold.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_HOLY_FESTIVALS_NAME" Language="en_US">
+      <Text>Holy Festivals</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_HOLY_FESTIVALS_DESCRIPTION" Language="en_US">
+      <Text>Increases Culture, Amenities and Loyalty across cities shaped by your religion.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_MISSIONARY_MANDATE_NAME" Language="en_US">
+      <Text>Missionary Mandate</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_MISSIONARY_MANDATE_DESCRIPTION" Language="en_US">
+      <Text>Strengthens religious pressure spread through trade routes and religious units.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_MOBILIZE_ORDERS_NAME" Language="en_US">
+      <Text>Mobilize Orders</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_MOBILIZE_ORDERS_DESCRIPTION" Language="en_US">
+      <Text>Reduces the Faith cost of selected religious or military purchases.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_WONDER_VENERATION_NAME" Language="en_US">
+      <Text>Wonder Veneration</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_WONDER_VENERATION_DESCRIPTION" Language="en_US">
+      <Text>World Wonders and Holy Sites generate additional Tourism or religious influence.</Text>
+    </Row>
+  </LocalizedText>
+</GameData>
