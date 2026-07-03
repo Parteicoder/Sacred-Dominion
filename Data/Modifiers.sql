@@ -4,71 +4,97 @@
 -- Primary language: English
 -- German translation: Text/de_DE.xml
 --
--- Phase 2 modifier file.
+-- Phase 2 gameplay modifiers.
 --
--- Current state:
--- This file is intentionally safe. It contains activation markers only.
--- No gameplay effects are active yet.
+-- Issue #1 fix:
+-- The first three Phase 2 mechanics now have small active gameplay effects.
+-- These effects are intentionally conservative and easy to test.
 --
--- Purpose:
--- - keep modifier work separate from base record creation
--- - activate effects one by one after local testing
--- - make rollbacks easier if a database error appears
+-- Active effects:
+-- - Tithe Administration: Temples provide +1 Gold while the policy is slotted.
+-- - Charitable Works: Shrines and Temples provide +1 Food for cities using the belief.
+-- - Pilgrimage Network: Temples provide +1 Culture for cities using the belief.
 --
--- See:
--- Docs/PHASE2_MODIFIERS.md
+-- Still pending for later passes:
+-- - Sacred Administration
+-- - Order Patronage
 
 -------------------------------------------------------------------------------
--- Activation slot 1: Tithe Administration
+-- Policy: Tithe Administration
 -------------------------------------------------------------------------------
--- Record: POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION
--- German: Zehntverwaltung
--- First target: small Gold or Faith bonus from religious infrastructure.
--- Status: not active yet.
--- Test priority: first.
+
+INSERT OR IGNORE INTO PolicyModifiers
+    (PolicyType, ModifierId)
+VALUES
+    ('POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION', 'SACRED_DOMINION_TITHE_ADMINISTRATION_TEMPLE_GOLD');
+
+INSERT OR IGNORE INTO Modifiers
+    (ModifierId, ModifierType, SubjectRequirementSetId)
+VALUES
+    ('SACRED_DOMINION_TITHE_ADMINISTRATION_TEMPLE_GOLD', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE', NULL);
+
+INSERT OR IGNORE INTO ModifierArguments
+    (ModifierId, Name, Value)
+VALUES
+    ('SACRED_DOMINION_TITHE_ADMINISTRATION_TEMPLE_GOLD', 'BuildingType', 'BUILDING_TEMPLE'),
+    ('SACRED_DOMINION_TITHE_ADMINISTRATION_TEMPLE_GOLD', 'YieldType', 'YIELD_GOLD'),
+    ('SACRED_DOMINION_TITHE_ADMINISTRATION_TEMPLE_GOLD', 'Amount', '1');
 
 -------------------------------------------------------------------------------
--- Activation slot 2: Charitable Works
+-- Belief: Charitable Works
 -------------------------------------------------------------------------------
--- Record: BELIEF_SACRED_DOMINION_CHARITABLE_WORKS
--- German: Armenfuersorge
--- First target: small city-support or yield bonus from Holy Site buildings.
--- Status: not active yet.
--- Test priority: second.
+
+INSERT OR IGNORE INTO BeliefModifiers
+    (BeliefType, ModifierID)
+VALUES
+    ('BELIEF_SACRED_DOMINION_CHARITABLE_WORKS', 'SACRED_DOMINION_CHARITABLE_WORKS_ATTACH_SHRINE_FOOD'),
+    ('BELIEF_SACRED_DOMINION_CHARITABLE_WORKS', 'SACRED_DOMINION_CHARITABLE_WORKS_ATTACH_TEMPLE_FOOD');
+
+INSERT OR IGNORE INTO Modifiers
+    (ModifierId, ModifierType, SubjectRequirementSetId)
+VALUES
+    ('SACRED_DOMINION_CHARITABLE_WORKS_ATTACH_SHRINE_FOOD', 'MODIFIER_ALL_CITIES_ATTACH_MODIFIER', NULL),
+    ('SACRED_DOMINION_CHARITABLE_WORKS_ATTACH_TEMPLE_FOOD', 'MODIFIER_ALL_CITIES_ATTACH_MODIFIER', NULL),
+    ('SACRED_DOMINION_CHARITABLE_WORKS_SHRINE_FOOD', 'MODIFIER_SINGLE_CITY_ADJUST_BUILDING_YIELD_CHANGE', NULL),
+    ('SACRED_DOMINION_CHARITABLE_WORKS_TEMPLE_FOOD', 'MODIFIER_SINGLE_CITY_ADJUST_BUILDING_YIELD_CHANGE', NULL);
+
+INSERT OR IGNORE INTO ModifierArguments
+    (ModifierId, Name, Value)
+VALUES
+    ('SACRED_DOMINION_CHARITABLE_WORKS_ATTACH_SHRINE_FOOD', 'ModifierId', 'SACRED_DOMINION_CHARITABLE_WORKS_SHRINE_FOOD'),
+    ('SACRED_DOMINION_CHARITABLE_WORKS_ATTACH_TEMPLE_FOOD', 'ModifierId', 'SACRED_DOMINION_CHARITABLE_WORKS_TEMPLE_FOOD'),
+    ('SACRED_DOMINION_CHARITABLE_WORKS_SHRINE_FOOD', 'BuildingType', 'BUILDING_SHRINE'),
+    ('SACRED_DOMINION_CHARITABLE_WORKS_SHRINE_FOOD', 'YieldType', 'YIELD_FOOD'),
+    ('SACRED_DOMINION_CHARITABLE_WORKS_SHRINE_FOOD', 'Amount', '1'),
+    ('SACRED_DOMINION_CHARITABLE_WORKS_TEMPLE_FOOD', 'BuildingType', 'BUILDING_TEMPLE'),
+    ('SACRED_DOMINION_CHARITABLE_WORKS_TEMPLE_FOOD', 'YieldType', 'YIELD_FOOD'),
+    ('SACRED_DOMINION_CHARITABLE_WORKS_TEMPLE_FOOD', 'Amount', '1');
 
 -------------------------------------------------------------------------------
--- Activation slot 3: Pilgrimage Network
+-- Belief: Pilgrimage Network
 -------------------------------------------------------------------------------
--- Record: BELIEF_SACRED_DOMINION_PILGRIMAGE_NETWORK
--- German: Pilgernetzwerk
--- First target: small Culture or Faith bonus from religious infrastructure.
--- Status: not active yet.
--- Test priority: third.
+
+INSERT OR IGNORE INTO BeliefModifiers
+    (BeliefType, ModifierID)
+VALUES
+    ('BELIEF_SACRED_DOMINION_PILGRIMAGE_NETWORK', 'SACRED_DOMINION_PILGRIMAGE_NETWORK_ATTACH_TEMPLE_CULTURE');
+
+INSERT OR IGNORE INTO Modifiers
+    (ModifierId, ModifierType, SubjectRequirementSetId)
+VALUES
+    ('SACRED_DOMINION_PILGRIMAGE_NETWORK_ATTACH_TEMPLE_CULTURE', 'MODIFIER_ALL_CITIES_ATTACH_MODIFIER', NULL),
+    ('SACRED_DOMINION_PILGRIMAGE_NETWORK_TEMPLE_CULTURE', 'MODIFIER_SINGLE_CITY_ADJUST_BUILDING_YIELD_CHANGE', NULL);
+
+INSERT OR IGNORE INTO ModifierArguments
+    (ModifierId, Name, Value)
+VALUES
+    ('SACRED_DOMINION_PILGRIMAGE_NETWORK_ATTACH_TEMPLE_CULTURE', 'ModifierId', 'SACRED_DOMINION_PILGRIMAGE_NETWORK_TEMPLE_CULTURE'),
+    ('SACRED_DOMINION_PILGRIMAGE_NETWORK_TEMPLE_CULTURE', 'BuildingType', 'BUILDING_TEMPLE'),
+    ('SACRED_DOMINION_PILGRIMAGE_NETWORK_TEMPLE_CULTURE', 'YieldType', 'YIELD_CULTURE'),
+    ('SACRED_DOMINION_PILGRIMAGE_NETWORK_TEMPLE_CULTURE', 'Amount', '1');
 
 -------------------------------------------------------------------------------
--- Activation slot 4: Sacred Administration
+-- Reserved for later passes
 -------------------------------------------------------------------------------
--- Record: BELIEF_SACRED_DOMINION_SACRED_ADMINISTRATION
--- German: Heilige Verwaltung
--- First target: administration, stability or fallback yield bonus.
--- Status: not active yet.
--- Test priority: fourth.
-
--------------------------------------------------------------------------------
--- Activation slot 5: Order Patronage
--------------------------------------------------------------------------------
--- Record: POLICY_SACRED_DOMINION_ORDER_PATRONAGE
--- German: Ordensfoerderung
--- First target: modest Faith support while the policy is slotted.
--- Status: not active yet.
--- Test priority: fifth.
-
--------------------------------------------------------------------------------
--- Local testing rule
--------------------------------------------------------------------------------
--- Add only one effect at a time.
--- After each effect, check:
--- - Database.log
--- - Localization.log
--- - in-game tooltip
--- - whether a new game starts
+-- Sacred Administration: planned stability, loyalty or fallback yield bonus.
+-- Order Patronage: planned Faith-to-action or fallback Faith support bonus.
