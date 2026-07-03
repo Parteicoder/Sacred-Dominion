@@ -83,36 +83,36 @@
       <Text>Holy Site project. Converts Production into Culture and Faith.</Text>
     </Row>
 
-    <!-- Decrees -->
+    <!-- Phase 4 decrees as policy cards -->
     <Row Tag="LOC_SACRED_DOMINION_DECREE_TITHE_NAME" Language="en_US">
       <Text>Declare Tithe</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_TITHE_DESCRIPTION" Language="en_US">
-      <Text>Cities following your majority religion generate additional Gold.</Text>
+      <Text>Decree policy. Temples provide +1 Gold while this policy is slotted.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_HOLY_FESTIVALS_NAME" Language="en_US">
       <Text>Holy Festivals</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_HOLY_FESTIVALS_DESCRIPTION" Language="en_US">
-      <Text>Increases Culture, Amenities and Loyalty across cities shaped by your religion.</Text>
+      <Text>Decree policy. Temples provide +1 Culture while this policy is slotted.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_MISSIONARY_MANDATE_NAME" Language="en_US">
       <Text>Missionary Mandate</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_MISSIONARY_MANDATE_DESCRIPTION" Language="en_US">
-      <Text>Strengthens religious pressure spread through trade routes and religious units.</Text>
+      <Text>Decree policy. Shrines provide +1 Faith while this policy is slotted.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_MOBILIZE_ORDERS_NAME" Language="en_US">
       <Text>Mobilize Orders</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_MOBILIZE_ORDERS_DESCRIPTION" Language="en_US">
-      <Text>Reduces the Faith cost of selected religious or military purchases.</Text>
+      <Text>Decree policy. Temples provide +1 Faith while this policy is slotted.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_WONDER_VENERATION_NAME" Language="en_US">
       <Text>Wonder Veneration</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_DECREE_WONDER_VENERATION_DESCRIPTION" Language="en_US">
-      <Text>World Wonders and Holy Sites generate additional Tourism or religious influence.</Text>
+      <Text>Decree policy. Temples provide +1 Culture while this policy is slotted.</Text>
     </Row>
   </LocalizedText>
 </GameData>
