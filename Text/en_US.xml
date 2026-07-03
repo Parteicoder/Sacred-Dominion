@@ -22,6 +22,12 @@
     <Row Tag="LOC_SACRED_DOMINION_CONCEPT_SCHISM_DESCRIPTION" Language="en_US">
       <Text>Represents religious division inside cities and empires. High Schism may weaken loyalty, amenities or stability.</Text>
     </Row>
+    <Row Tag="LOC_SACRED_DOMINION_CONCEPT_RESISTANCE_NAME" Language="en_US">
+      <Text>Resistance</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_CONCEPT_RESISTANCE_DESCRIPTION" Language="en_US">
+      <Text>Represents pushback against harsh religious rule. High Resistance may later weaken stability, order or decree effects.</Text>
+    </Row>
 
     <!-- Phase 2 beliefs -->
     <Row Tag="LOC_SACRED_DOMINION_BELIEF_SACRED_ADMINISTRATION_NAME" Language="en_US">
