@@ -16,11 +16,11 @@ Phase 2 focuses on:
 
 ## Progress
 
-**Overall progress:** 72%
+**Overall progress:** 82%
 
 ## Last completed step
 
-Enabled the basic SQL records for the first three Sacred Dominion beliefs and the first two Sacred Dominion policy cards. No gameplay modifiers are attached yet.
+Created `Docs/PHASE2_MODIFIERS.md`, added `Data/Modifiers.sql`, and registered the modifier file in `SacredDominion.modinfo`.
 
 ## Current checklist
 
@@ -34,8 +34,10 @@ Enabled the basic SQL records for the first three Sacred Dominion beliefs and th
 - [x] Phase 2 documentation updated
 - [x] active belief SQL enabled
 - [x] active policy SQL enabled
+- [x] modifier design selected
+- [x] modifier file created and registered
 - [ ] basic record load test passed
-- [ ] modifier design selected
+- [ ] first conservative modifiers implemented
 - [ ] ready for local SQL/load test
 - [ ] local Civ VI test passed
 
@@ -58,14 +60,33 @@ Policies:
 
 ## Current implementation state
 
-The base records are now active:
+The base records are active:
 
 - `Data/Beliefs.sql` inserts the belief `Types` and `Beliefs` records.
 - `Data/Policies.sql` inserts the policy `Types` and `Policies` records.
+- `Data/Modifiers.sql` is loaded by the mod but currently does not apply gameplay effects.
 
 No modifiers are attached yet.
 
-This means Phase 2 is now ready for a basic database/load test, but not yet for a real gameplay balance test.
+This means Phase 2 is ready for a basic database/load test and prepared for conservative modifiers.
+
+---
+
+## Modifier activation plan
+
+Modifier planning lives in:
+
+```text
+Docs/PHASE2_MODIFIERS.md
+```
+
+Recommended activation order:
+
+1. Tithe Administration
+2. Charitable Works
+3. Pilgrimage Network
+4. Sacred Administration
+5. Order Patronage
 
 ---
 
