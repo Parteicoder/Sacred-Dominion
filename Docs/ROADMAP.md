@@ -19,7 +19,7 @@ English is the source language. German is maintained as a full translation.
 | Phase 2 - Erste aktive Faith-Mechaniken | Implementiert, Test übersprungen |
 | Phase 3 - Stadtbasierte Glaubensaktionen | Implementiert, Test übersprungen |
 | Phase 4 - Reichsweite Dekrete | Erster Policy-Pass implementiert |
-| Phase 5 - Eifer und Spaltung | Noch nicht gestartet |
+| Phase 5 - Eifer und Spaltung | Planung gestartet, kein aktives SQL |
 | Phase 6 - Religiöse Einheiten | Noch nicht gestartet |
 | Phase 7 - UI | Noch nicht gestartet |
 | Phase 8 - Balance und Workshop | Noch nicht gestartet |
@@ -71,19 +71,29 @@ Implemented first sacred decrees as policy cards:
 - Mobilize Orders: Temple +1 Faith
 - Wonder Veneration: Temple +1 Culture
 
+---
+
+## Phase 5
+
+Planning started for the first tension layer:
+
+- Zeal / Eifer
+- Schism / Spaltung
+- Resistance / Widerstand
+
+Phase 5 currently has no active gameplay SQL.
+
 Files:
 
 ```text
-Data/Decrees.sql
-Docs/PHASE4_STATUS.md
-Docs/PHASE4_MECHANICS.md
+Docs/PHASE5_STATUS.md
+Docs/PHASE5_MECHANICS.md
+Docs/PHASE5_IMPLEMENTATION_BOUNDARIES.md
 ```
 
 ---
 
 ## Next phases
-
-Phase 5 will introduce planning for Zeal, Schism and religious tension.
 
 Phase 6 will expand religious unit roles.
 
@@ -97,6 +107,7 @@ Phase 8 will focus on balance, AI and Workshop release polish.
 
 - Issue #5: local Civ VI load test for Phase 1 and 2
 - Issue #6: Phase 3 city project test
+- Issue #7: Phase 4 decree policy test
 
 ---
 
