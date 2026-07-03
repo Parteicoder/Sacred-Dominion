@@ -57,30 +57,30 @@
       <Text>Tempel gewähren +1 Glauben, solange diese Politik eingesetzt ist.</Text>
     </Row>
 
-    <!-- Stadtaktionen / Projekte für Glauben -->
+    <!-- Phase-3-Stadtaktionen / Projekte für Glauben -->
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_NAME" Language="de_DE">
       <Text>Predigtkampagne</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_DESCRIPTION" Language="de_DE">
-      <Text>Erhöht den religiösen Druck dieser Stadt für begrenzte Zeit.</Text>
+      <Text>Heilige-Stätte-Projekt. Wandelt Produktion in Glauben um.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_CHARITY_NAME" Language="de_DE">
       <Text>Armenfürsorge</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_CHARITY_DESCRIPTION" Language="de_DE">
-      <Text>Nutzt Glauben, um die Bevölkerung zu unterstützen und die lokale Stabilität zu verbessern.</Text>
+      <Text>Heilige-Stätte-Projekt. Wandelt Produktion in Nahrung um.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_HOLY_ORDER_NAME" Language="de_DE">
       <Text>Heilige Ordnung</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_HOLY_ORDER_DESCRIPTION" Language="de_DE">
-      <Text>Stärkt Loyalität und religiöse Ordnung in dieser Stadt.</Text>
+      <Text>Heilige-Stätte-Projekt. Wandelt Produktion in Glauben und Gold um.</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_PILGRIMAGE_CENTER_NAME" Language="de_DE">
       <Text>Pilgerzentrum</Text>
     </Row>
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_PILGRIMAGE_CENTER_DESCRIPTION" Language="de_DE">
-      <Text>Macht diese Stadt zu einem lokalen Zentrum für Pilger, Kultur und religiösen Einfluss.</Text>
+      <Text>Heilige-Stätte-Projekt. Wandelt Produktion in Kultur und Glauben um.</Text>
     </Row>
 
     <!-- Dekrete -->
