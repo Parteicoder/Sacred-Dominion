@@ -16,11 +16,11 @@ Phase 3 focuses on:
 
 ## Progress
 
-**Overall progress:** 75%
+**Overall progress:** 82%
 
 ## Last completed step
 
-Implemented the first four Holy Site city projects, updated English and German tooltips, updated README, added the Phase 3 test checklist, and created Issue #6 for later local testing.
+Added static review notes to this status file. Phase 3 is now implementation-ready for a later local Civilization VI test.
 
 ## Current checklist
 
@@ -33,6 +33,7 @@ Implemented the first four Holy Site city projects, updated English and German t
 - [x] README updated
 - [x] Phase 3 test checklist created
 - [x] local test issue created
+- [x] static review notes added
 - [ ] local Civ VI test passed
 
 ---
@@ -43,6 +44,26 @@ Implemented the first four Holy Site city projects, updated English and German t
 - Charitable Works / Armenfürsorge: Holy Site project converting Production into Food.
 - Holy Order / Heilige Ordnung: Holy Site project converting Production into Faith and Gold.
 - Pilgrimage Center / Pilgerzentrum: Holy Site project converting Production into Culture and Faith.
+
+---
+
+## Static review notes
+
+Checked before local test:
+
+- `Data/Projects.sql` contains the four project records.
+- The projects require `DISTRICT_HOLY_SITE`.
+- Project yield conversions are defined.
+- English project text exists in `Text/en_US.xml`.
+- German project text exists in `Text/de_DE.xml`.
+- README includes Phase 3.
+- Issue #6 tracks the later local test.
+
+Main thing to verify later:
+
+- project visibility in Holy Site cities
+- yield conversion behavior
+- clean database and localization logs
 
 ---
 
