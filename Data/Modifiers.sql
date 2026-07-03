@@ -7,21 +7,68 @@
 -- Phase 2 modifier file.
 --
 -- Current state:
--- This file is intentionally safe and does not apply gameplay effects yet.
+-- This file is intentionally safe. It contains activation markers only.
+-- No gameplay effects are active yet.
 --
 -- Purpose:
--- - keep future modifier work separate from base record creation
--- - activate modifiers one by one after local testing
--- - make rollbacks easier if a modifier chain breaks Database.log
---
--- Planned activation order:
--- 1. Tithe Administration
--- 2. Charitable Works
--- 3. Pilgrimage Network
--- 4. Sacred Administration
--- 5. Order Patronage
+-- - keep modifier work separate from base record creation
+-- - activate effects one by one after local testing
+-- - make rollbacks easier if a database error appears
 --
 -- See:
 -- Docs/PHASE2_MODIFIERS.md
---
--- No gameplay changes are applied by this file yet.
+
+-------------------------------------------------------------------------------
+-- Activation slot 1: Tithe Administration
+-------------------------------------------------------------------------------
+-- Record: POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION
+-- German: Zehntverwaltung
+-- First target: small Gold or Faith bonus from religious infrastructure.
+-- Status: not active yet.
+-- Test priority: first.
+
+-------------------------------------------------------------------------------
+-- Activation slot 2: Charitable Works
+-------------------------------------------------------------------------------
+-- Record: BELIEF_SACRED_DOMINION_CHARITABLE_WORKS
+-- German: Armenfuersorge
+-- First target: small city-support or yield bonus from Holy Site buildings.
+-- Status: not active yet.
+-- Test priority: second.
+
+-------------------------------------------------------------------------------
+-- Activation slot 3: Pilgrimage Network
+-------------------------------------------------------------------------------
+-- Record: BELIEF_SACRED_DOMINION_PILGRIMAGE_NETWORK
+-- German: Pilgernetzwerk
+-- First target: small Culture or Faith bonus from religious infrastructure.
+-- Status: not active yet.
+-- Test priority: third.
+
+-------------------------------------------------------------------------------
+-- Activation slot 4: Sacred Administration
+-------------------------------------------------------------------------------
+-- Record: BELIEF_SACRED_DOMINION_SACRED_ADMINISTRATION
+-- German: Heilige Verwaltung
+-- First target: administration, stability or fallback yield bonus.
+-- Status: not active yet.
+-- Test priority: fourth.
+
+-------------------------------------------------------------------------------
+-- Activation slot 5: Order Patronage
+-------------------------------------------------------------------------------
+-- Record: POLICY_SACRED_DOMINION_ORDER_PATRONAGE
+-- German: Ordensfoerderung
+-- First target: modest Faith support while the policy is slotted.
+-- Status: not active yet.
+-- Test priority: fifth.
+
+-------------------------------------------------------------------------------
+-- Local testing rule
+-------------------------------------------------------------------------------
+-- Add only one effect at a time.
+-- After each effect, check:
+-- - Database.log
+-- - Localization.log
+-- - in-game tooltip
+-- - whether a new game starts
