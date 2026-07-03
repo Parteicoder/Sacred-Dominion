@@ -1,0 +1,13 @@
+-- Sacred Dominion
+-- Policies.sql
+--
+-- Primary language: English
+-- German translation: Text/de_DE.xml
+--
+-- Phase 1 placeholder.
+-- Future purpose:
+-- - add faith-focused policy cards
+-- - add modifiers for empire-wide faith usage
+-- - connect policy names and descriptions through LOC_SACRED_DOMINION_* keys
+
+-- No gameplay changes are applied in Phase 1.
