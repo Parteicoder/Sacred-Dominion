@@ -5,6 +5,7 @@
     <Teaser>A faith rework for Civilization VI.</Teaser>
     <Description>A faith rework for Civilization VI that turns Faith into an active resource for rule, stability, culture and religious pressure.</Description>
     <Authors>Parteicoder</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
     <CompatibleVersions>1.2,2.0</CompatibleVersions>
   </Properties>
 
@@ -18,12 +19,12 @@
   </Files>
 
   <Components>
-    <UpdateText id="SACRED_DOMINION_TEXT">
+    <LocalizedText id="SACRED_DOMINION_TEXT">
       <Items>
         <File>Text/en_US.xml</File>
         <File>Text/de_DE.xml</File>
       </Items>
-    </UpdateText>
+    </LocalizedText>
 
     <UpdateDatabase id="SACRED_DOMINION_DATA">
       <Items>
