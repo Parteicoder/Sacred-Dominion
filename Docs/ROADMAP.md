@@ -1,418 +1,264 @@
-# Sacred Dominion – Entwicklungsphasen
+# Sacred Dominion - Entwicklungsphasen
 
-Diese Roadmap teilt **Sacred Dominion** in klare Entwicklungsphasen auf. Ziel ist, die Mod nicht sofort als riesiges UI-Monster zu bauen, sondern erst eine spielbare Basis zu schaffen und danach Schicht für Schicht mehr aktive Glaubensmechaniken einzubauen.
+Diese Roadmap zeigt den aktuellen Stand von **Sacred Dominion**.
 
-Der Grundsatz: **Erst spielbar, dann mächtig, dann schön.**
-
----
-
-## Phase 0 – Konzept einfrieren
-
-**Ziel:** Festlegen, was Sacred Dominion im Kern sein soll und was ausdrücklich nicht Teil der ersten Version wird.
-
-### Inhalte
-
-- endgültiger Projektname: `Sacred Dominion`
-- Kernidee definieren: Glauben wird aktive Machtressource
-- Hauptsysteme grob beschreiben
-- Grenzen des ersten Releases festlegen
-- technische Risiken im Civ-6-Modding notieren
-
-### Entscheidungen
-
-- Die erste spielbare Version soll ohne komplexe eigene UI funktionieren.
-- UI-Erweiterungen kommen später.
-- Bestehende Civ-6-Mechaniken werden zuerst genutzt.
-- Neue Systeme sollen schrittweise simuliert werden, statt sofort vollständig neu gebaut zu werden.
-
-### Ergebnis
-
-- README vorhanden
-- Roadmap vorhanden
-- grobes Design steht
-
-### Definition of Done
-
-- [x] Projektname steht
-- [x] Grundidee ist dokumentiert
-- [x] Phasenplan ist angelegt
-- [ ] `Docs/DESIGN.md` ist erstellt
-- [ ] `Docs/BALANCING.md` ist erstellt
-
----
-
-## Phase 1 – Mod-Grundgerüst
-
-**Ziel:** Die Mod soll in Civilization VI sauber erkannt und geladen werden.
-
-### Inhalte
-
-- `.modinfo` erstellen
-- Ordnerstruktur anlegen
-- deutsche und englische Textdateien vorbereiten
-- erste Dummy-Dateien für SQL/XML/Lua anlegen
-- Mod im Zusatzinhalte-Menü sichtbar machen
-
-### Geplante Dateien
+Grundsatz:
 
 ```text
-Sacred-Dominion/
-├── SacredDominion.modinfo
-├── Data/
-│   ├── Beliefs.sql
-│   ├── Policies.sql
-│   ├── Buildings.sql
-│   └── Projects.sql
-├── Text/
-│   ├── de_DE.xml
-│   └── en_US.xml
-└── Docs/
-    ├── ROADMAP.md
-    ├── DESIGN.md
-    └── BALANCING.md
+Erst spielbar, dann mächtig, dann schön.
 ```
 
-### Noch kein Ziel dieser Phase
-
-- keine neuen komplexen UI-Fenster
-- keine fertige Balance
-- keine neue Siegmechanik
-
-### Definition of Done
-
-- [ ] Mod erscheint in Civilization VI unter Zusatzinhalte
-- [ ] Mod lässt sich aktivieren
-- [ ] Spiel startet ohne Datenbankfehler
-- [ ] Texte werden korrekt geladen
-- [ ] keine roten Lua-/Database-Fehler im Log
+Die Mod wird mit **Englisch als Hauptsprache** entwickelt. Deutsch wird als vollständige Übersetzung gepflegt.
 
 ---
 
-## Phase 2 – Erste aktive Glaubensnutzung über bestehende Mechaniken
+## Aktueller Stand
 
-**Ziel:** Glauben soll bereits nützlicher werden, ohne eigene Spezial-UI zu brauchen.
-
-Diese Phase ist der erste echte Gameplay-Kern. Sie nutzt möglichst robuste Civ-6-Mechaniken: Glaubenssätze, Gebäude, Projekte, Politikkarten und Modifier.
-
-### Inhalte
-
-- neue oder angepasste Glaubenssätze
-- neue Politikkarten mit Glaubensbezug
-- zusätzliche Glaubenskäufe prüfen
-- Heilige Stätten stärker mit Stadtentwicklung verbinden
-- Glauben mit Loyalität, Zufriedenheit, Kultur oder Gold verknüpfen
-
-### Mögliche Features
-
-#### Glaubenssatz: Heilige Verwaltung
-
-Städte mit Mehrheitsreligion erhalten zusätzliche Loyalität.
-
-#### Glaubenssatz: Armenfürsorge
-
-Heilige Stätten geben Nahrung oder Wohnraum.
-
-#### Politikkarte: Orden fördern
-
-Religiöse Einheiten oder bestimmte Militäreinheiten werden günstiger mit Glauben gekauft.
-
-#### Politikkarte: Zehntverwaltung
-
-Mehr Gold aus Städten mit eigener Mehrheitsreligion.
-
-### Definition of Done
-
-- [ ] mindestens 3 neue oder angepasste Glaubenssätze vorhanden
-- [ ] mindestens 2 neue Politikkarten vorhanden
-- [ ] Glauben hat auch außerhalb des Religionssieges spürbaren Nutzen
-- [ ] KI kann weiter normal spielen
-- [ ] keine harte Abhängigkeit von eigener UI
+| Phase | Status |
+| --- | --- |
+| Phase 0 - Konzept | Abgeschlossen |
+| Phase 1 - Mod-Grundgerüst | Implementiert, lokaler Test offen |
+| Phase 2 - Erste aktive Faith-Mechaniken | Implementiert, lokaler Test offen |
+| Phase 3 - Stadtbasierte Glaubensaktionen | Implementiert als erster Projekt-Pass, lokaler Test offen |
+| Phase 4 - Reichsweite Dekrete | Noch nicht gestartet |
+| Phase 5 - Eifer und Spaltung | Noch nicht gestartet |
+| Phase 6 - Religiöse Einheiten | Noch nicht gestartet |
+| Phase 7 - UI | Noch nicht gestartet |
+| Phase 8 - Balance und Workshop | Noch nicht gestartet |
 
 ---
 
-## Phase 3 – Stadtbasierte Glaubensaktionen
+## Phase 0 - Konzept
 
-**Ziel:** Städte bekommen aktive Glaubensentscheidungen.
+**Ziel:** Kernidee und Grenzen festlegen.
 
-Da eigene Stadt-Buttons technisch aufwendiger sind, können die ersten Aktionen über Stadtprojekte, Dummy-Gebäude oder Modifier simuliert werden.
+### Erledigt
 
-### Inhalte
+- Projektname steht: `Sacred Dominion`
+- Grundidee steht: Faith wird aktive Machtressource
+- Roadmap existiert
+- Design-Dokument existiert
+- Balance-Dokument existiert
+- Lokalisierungsregel existiert
 
-- neue Stadtprojekte mit Glaubenslogik
-- Projekte für Stabilität, Loyalität, Wachstum und religiösen Druck
-- erste lokale Entscheidungen pro Stadt
-- Effekte zeitlich begrenzen, wenn möglich
+### Status
 
-### Mögliche Stadtaktionen
-
-#### Predigtkampagne
-
-Erhöht religiösen Druck der Stadt für mehrere Runden.
-
-#### Armenfürsorge
-
-Erhöht Zufriedenheit, Nahrung oder Wohnraum.
-
-#### Heilige Ordnung
-
-Erhöht Loyalität und senkt Unruhe.
-
-#### Pilgerzentrum ausrufen
-
-Erzeugt Gold, Kultur oder Tourismus in Städten mit Heiliger Stätte.
-
-### Technische Umsetzung, erster Ansatz
-
-- Stadtprojekte in `Projects.sql`
-- Effekte über Modifier
-- falls nötig Dummy-Gebäude zur Speicherung von Zuständen
-- Tooltips sauber benennen
-
-### Definition of Done
-
-- [ ] mindestens 3 Stadtprojekte vorhanden
-- [ ] Projekte sind im Spiel auswählbar
-- [ ] Effekte sind im Stadtbildschirm nachvollziehbar
-- [ ] keine Endlos- oder Stack-Fehler
-- [ ] Projektkosten sind sinnvoll skaliert
+Phase 0 ist abgeschlossen.
 
 ---
 
-## Phase 4 – Reichsweite Glaubensdekrete
+## Phase 1 - Mod-Grundgerüst
 
-**Ziel:** Der Spieler bekommt große, aktive Reichsentscheidungen auf Glaubensbasis.
+**Ziel:** Civilization VI erkennt und lädt die Mod.
 
-Dekrete sollen sich wie politische Großentscheidungen anfühlen: stark, aber nicht dauerhaft kostenlos.
+### Erledigt
 
-### Inhalte
+- `SacredDominion.modinfo` existiert
+- `Text/en_US.xml` existiert
+- `Text/de_DE.xml` existiert
+- Basisdateien in `Data/` existieren
+- `Docs/LOAD_TEST.md` existiert
+- `Docs/PHASE1_STATUS.md` existiert
 
-- reichsweite Effekte mit Cooldown-Idee
-- starke, zeitlich begrenzte Glaubensboni
-- verschiedene Dekrete für unterschiedliche Siegtypen
-- erste Nachteile oder Gegenkosten einbauen
+### Offen
+
+- lokaler Civ-VI-Ladetest
+
+### Status
+
+Phase 1 ist implementiert, aber nicht final abgeschlossen.
+
+---
+
+## Phase 2 - Erste aktive Faith-Mechaniken
+
+**Ziel:** Faith wird über bestehende Civ-VI-Systeme aktiver, ohne eigene UI.
+
+### Erledigt
+
+Es gibt 3 Glaubenssätze:
+
+- Sacred Administration / Heilige Verwaltung: Tempel geben +1 Glauben
+- Charitable Works / Armenfürsorge: Schreine und Tempel geben +1 Nahrung
+- Pilgrimage Network / Pilgernetzwerk: Tempel geben +1 Kultur
+
+Es gibt 2 Politikkarten:
+
+- Tithe Administration / Zehntverwaltung: Tempel geben +1 Gold, solange die Politik eingesetzt ist
+- Order Patronage / Ordensförderung: Tempel geben +1 Glauben, solange die Politik eingesetzt ist
+
+### Dateien
+
+```text
+Data/Beliefs.sql
+Data/Policies.sql
+Data/Modifiers.sql
+Text/en_US.xml
+Text/de_DE.xml
+Docs/PHASE2_STATUS.md
+Docs/PHASE2_MODIFIERS.md
+Docs/PHASE2_TEST.md
+Docs/PHASE2_STATIC_REVIEW.md
+```
+
+### Offen
+
+- lokaler Record-Test
+- lokaler Modifier-Test
+- Prüfung von `Database.log`
+- Prüfung von `Localization.log`
+
+### Status
+
+Phase 2 ist implementiert, aber nicht final abgeschlossen.
+
+---
+
+## Phase 3 - Stadtbasierte Glaubensaktionen
+
+**Ziel:** Städte bekommen erste aktive Faith-Aktionen über bestehende Projektmechaniken.
+
+### Erledigt
+
+Es gibt 4 Holy-Site-Projekte:
+
+- Sermon Campaign / Predigtkampagne: Produktion zu Glauben
+- Charitable Works / Armenfürsorge: Produktion zu Nahrung
+- Holy Order / Heilige Ordnung: Produktion zu Glauben und Gold
+- Pilgrimage Center / Pilgerzentrum: Produktion zu Kultur und Glauben
+
+### Dateien
+
+```text
+Data/Projects.sql
+Text/en_US.xml
+Text/de_DE.xml
+Docs/PHASE3_STATUS.md
+Docs/PHASE3_MECHANICS.md
+Docs/PHASE3_TEST.md
+README.md
+```
+
+### Offen
+
+- prüfen, ob die Projekte im Spiel erscheinen
+- prüfen, ob sie nur in Städten mit Heiliger Stätte erscheinen
+- prüfen, ob die Ertragsumwandlungen funktionieren
+- Prüfung von `Database.log`
+- Prüfung von `Localization.log`
+
+### Status
+
+Phase 3 ist als erster Projekt-Pass implementiert, aber nicht final abgeschlossen.
+
+---
+
+## Phase 4 - Reichsweite Glaubensdekrete
+
+**Ziel:** Der Spieler bekommt größere Reichsentscheidungen auf Faith-Basis.
 
 ### Mögliche Dekrete
 
-#### Zehnt ausrufen
+- Declare Tithe / Zehnt ausrufen
+- Holy Festivals / Heilige Feste
+- Missionary Mandate / Missionsmandat
+- Mobilize Orders / Orden mobilisieren
+- Wonder Veneration / Wunderverehrung
 
-Mehr Gold aus Städten mit eigener Mehrheitsreligion.
+### Technischer Ansatz
 
-#### Heilige Feste
+- zunächst über Policies, Projekte oder einfache Modifier simulieren
+- keine eigene UI in der ersten Umsetzung
+- starke Effekte nur nach lokalem Test von Phase 1 bis 3
 
-Mehr Kultur, Zufriedenheit und Loyalität für mehrere Runden.
+### Status
 
-#### Missionare entsenden
-
-Handelsrouten verbreiten Religion stärker.
-
-#### Orden mobilisieren
-
-Bestimmte Einheiten können günstiger mit Glauben erworben werden.
-
-#### Wunderverehrung
-
-Weltwunder und Heilige Stätten erzeugen zusätzlichen Tourismus.
-
-### Technische Umsetzung, erster Ansatz
-
-- Dekrete zunächst über Projekte, Policies oder Regierungskarten simulieren
-- später eventuell eigenes UI-Panel
-- Cooldowns zuerst über Kosten, Voraussetzungen oder Dummy-Mechaniken abbilden
-
-### Definition of Done
-
-- [ ] mindestens 3 Dekrete spielbar
-- [ ] Dekrete sind verständlich beschrieben
-- [ ] kein Dekret ist eindeutig immer die beste Wahl
-- [ ] Glaubenskosten fühlen sich relevant an
-- [ ] Effekte unterstützen mehrere Siegtypen
+Noch nicht gestartet.
 
 ---
 
-## Phase 5 – Eifer, Spaltung und religiöse Spannung
+## Phase 5 - Eifer, Spaltung und religiöse Spannung
 
-**Ziel:** Glauben bekommt Gewicht. Starker Glaubenseinsatz soll nicht nur Vorteile bringen, sondern auch Spannung erzeugen.
+**Ziel:** Faith bekommt Risiko und strategisches Gewicht.
 
-Diese Phase macht Sacred Dominion strategischer. Der Spieler soll abwägen müssen: Stabilisiere ich mein Reich, missioniere ich aggressiv oder riskiere ich innere Konflikte?
+### Geplante Richtungen
 
-### Inhalte
+- Eifer als positiver, aber riskanter Verstärker
+- Spaltung als religiöse Teilung in Städten
+- Widerstand gegen harte Glaubenspolitik
 
-- Spaltung als abstraktes System simulieren
-- Eifer als positiver, aber riskanter Zustand
-- gemischt religiöse Städte stärker berücksichtigen
-- Nachteile durch zu harte Glaubenspolitik prüfen
+### Status
 
-### Mögliche Mechaniken
-
-#### Spaltung
-
-Religiös gemischte Städte erhalten weniger Zufriedenheit oder Loyalität.
-
-#### Eifer
-
-Städte mit starker eigener Mehrheitsreligion erhalten stärkere Glaubenseffekte.
-
-#### Widerstand
-
-Städte mit fremder Mehrheitsreligion reagieren empfindlicher auf harte Dekrete.
-
-### Technische Umsetzung, erster Ansatz
-
-- Modifier auf Mehrheitsreligion prüfen
-- Loyalitäts-/Zufriedenheitsboni und Mali nutzen
-- wenn direkte Abfrage schwierig ist: über bestehende Religions- und Stadtstatus-Mechaniken annähern
-
-### Definition of Done
-
-- [ ] mindestens eine positive religiöse Spannungsmechanik vorhanden
-- [ ] mindestens eine negative religiöse Spannungsmechanik vorhanden
-- [ ] Spieler versteht Ursache und Wirkung über Tooltips
-- [ ] System ist nicht nur Strafe, sondern eröffnet Entscheidungen
+Noch nicht gestartet.
 
 ---
 
-## Phase 6 – Religiöse Einheiten erweitern
+## Phase 6 - Religiöse Einheiten erweitern
 
-**Ziel:** Missionare, Apostel und Gurus sollen mehr Rollen bekommen.
+**Ziel:** Missionare, Apostel und Gurus bekommen klarere Rollen.
 
-Religiöse Einheiten sollen nicht nur Ladungen verbrauchen, sondern taktisch interessanter werden.
+### Geplante Richtungen
 
-### Inhalte
+- Missionare als Gemeindeaufbau und Verbreitung
+- Apostel als theologische Machtfiguren
+- Gurus als Heilung und Stabilisierung
 
-- neue Promotions oder Effekte prüfen
-- bestehende religiöse Einheiten differenzieren
-- Guru stärker als Stabilitäts- oder Versöhnungseinheit nutzen
-- Apostel als theologische Machtfigur stärken
+### Status
 
-### Mögliche Rollen
-
-#### Missionar
-
-- günstige Verbreitung
-- Gemeinde stärken
-- eigene Städte schützen
-
-#### Apostel
-
-- harte theologische Aktionen
-- fremden Druck entfernen
-- Dogmen oder dauerhafte Boni setzen
-
-#### Guru
-
-- religiöse Einheiten heilen
-- Spannungen senken
-- kurzfristige Stadtboni geben
-
-### Definition of Done
-
-- [ ] mindestens eine religiöse Einheit hat neue oder klarere Rolle
-- [ ] Promotions oder Effekte sind verständlich
-- [ ] religiöser Kampf wird taktischer
-- [ ] KI wird nicht komplett aus dem Konzept geworfen
+Noch nicht gestartet.
 
 ---
 
-## Phase 7 – UI-Erweiterung
+## Phase 7 - UI-Erweiterung
 
 **Ziel:** Sacred Dominion bekommt eine eigene Benutzerführung.
 
-Diese Phase kommt bewusst spät. Erst muss das System spielbar sein, dann lohnt sich eine eigene Oberfläche.
+### Geplante Richtungen
 
-### Inhalte
+- Glaubensübersicht
+- Stadtbereich für Glaubenspolitik
+- Dekretübersicht
+- spätere Visualisierung von Eifer und Spaltung
 
-- eigenes Glaubenspanel prüfen
-- Stadt-Reiter oder Zusatzpanel für Glaubenspolitik prüfen
-- bessere Tooltips und Warnungen
-- Glaubensübersicht mit Eifer, Spaltung und aktiven Dekreten
-- eventuell Kartenansicht für religiöse Dynamik
+### Status
 
-### Gewünschte UI-Elemente
-
-#### Glaubensübersicht
-
-Zeigt Glaubensvorrat, Glauben pro Runde, aktive Dekrete und religiöse Risiken.
-
-#### Stadtbereich Glaubenspolitik
-
-Zeigt lokale Glaubensaktionen einer Stadt.
-
-#### Glaubensplaner
-
-Gibt Hinweise wie:
-
-- Stadt droht religiös zu kippen
-- Dekret ist wieder verfügbar
-- Spaltung steigt
-- Handelsroute verbreitet fremden Glauben
-
-#### Glaubenskarte
-
-Visualisiert religiösen Druck, Zentren und Spannungsräume.
-
-### Definition of Done
-
-- [ ] mindestens ein eigenes UI-Element funktioniert
-- [ ] UI verursacht keine Lua-Fehler
-- [ ] Aktionen sind besser sichtbar als vorher
-- [ ] Spieler erkennt religiöse Risiken ohne Log-Suche
+Noch nicht gestartet.
 
 ---
 
-## Phase 8 – Balance, KI und Workshop-Version
+## Phase 8 - Balance, KI und Workshop
 
-**Ziel:** Die Mod wird testbar, erklärbar und veröffentlichungsfähig.
+**Ziel:** Die Mod wird stabil, erklärbar und veröffentlichungsfähig.
 
-### Inhalte
+### Geplante Arbeiten
 
-- Balancewerte testen
-- verschiedene Siegtypen prüfen
+- mehrere Testpartien
+- Balancewerte glätten
 - KI-Verhalten beobachten
-- Texte glätten
-- Workshop-Beschreibung schreiben
+- Workshop-Text schreiben
 - Screenshots vorbereiten
-- erste Release-Version markieren
+- Release-Version vorbereiten
 
-### Testfragen
+### Status
 
-- Ist Glauben jetzt spürbar aktiver?
-- Wird Glauben zu stark im Vergleich zu Gold oder Produktion?
-- Gibt es eine beste Strategie, die alles dominiert?
-- Kann man auch ohne Religionssieg sinnvoll mit Glauben spielen?
-- Ist die Mod verständlich ohne Anleitungsvideo?
-- Läuft sie ohne Datenbank- und Lua-Fehler?
-
-### Definition of Done
-
-- [ ] Mod ist mehrere Partien lang stabil
-- [ ] keine bekannten Spielstartfehler
-- [ ] Balance grob spielbar
-- [ ] README aktuell
-- [ ] Workshop-Text vorhanden
-- [ ] Version `0.1.0` vorbereitet
+Noch nicht gestartet.
 
 ---
 
-## Empfohlene Release-Stufen
+## Test-Tracker
 
-| Version | Inhalt |
-| --- | --- |
-| `0.0.1` | Mod-Grundgerüst lädt im Spiel |
-| `0.1.0` | Erste spielbare Faith-Rework-Version ohne eigene UI |
-| `0.2.0` | Stadtaktionen und erste Dekrete |
-| `0.3.0` | Eifer/Spaltung als simuliertes Spannungssystem |
-| `0.4.0` | Erweiterte religiöse Einheiten |
-| `0.5.0` | Erste UI-Erweiterung |
-| `1.0.0` | Stabile Workshop-Version |
+Aktuelle offene Test-Issues:
+
+- Issue #5: Lokaler Civ VI Ladetest fuer Phase 1 und 2
+- Issue #6: Phase 3 Stadtprojekte pruefen
 
 ---
 
-## Priorität für den Start
+## Nächste sinnvolle Reihenfolge
 
-Die ersten drei praktischen Aufgaben sind:
+1. Phase 1 bis 3 lokal testen
+2. Logs prüfen
+3. offensichtliche SQL-Fehler beheben
+4. erst danach Phase 4 mit Dekreten beginnen
 
-1. `SacredDominion.modinfo` erstellen
-2. Mod im Spiel sichtbar machen
-3. erste einfache Faith-Mechaniken über SQL bauen
-
-Erst danach sollte die große UI angefasst werden. Sonst wird das Projekt schnell ein brennender Tempel aus Lua-Fehlern und schönen Absichten.
+Wenn trotzdem vor dem Test weitergearbeitet wird, dann nur mit Dokumentation, Planung oder sehr sicheren Scaffolds.
