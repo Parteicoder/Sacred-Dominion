@@ -1,187 +1,117 @@
-# Sacred Dominion - Phase 2 Modifier Plan
+# Sacred Dominion - Phase 2 Modifiers
 
-Phase 2 now has active base records for the first beliefs and policy cards.
+Phase 2 now has active conservative gameplay effects for all five first belief and policy records.
 
-This document defines the planned first modifier pass. The effects should be added one by one after the basic records load cleanly in Civilization VI.
-
----
-
-## Current rule
-
-Do not attach all modifiers at once.
-
-Add them in small testable steps:
-
-1. one belief or policy
-2. one effect
-3. one local load test
-4. check `Database.log`, `Localization.log` and in-game tooltip
-5. only then move to the next effect
-
-This prevents the mod from becoming a fog machine full of invisible SQL goblins.
+These effects are deliberately small. The goal is to verify that the system loads, that the tooltips are clear, and that Faith starts to matter more without creating a balance avalanche.
 
 ---
 
-## Planned first effects
+## Active effects
 
-## 1. Sacred Administration
-
-**Record:** `BELIEF_SACRED_DOMINION_SACRED_ADMINISTRATION`  
-**German:** Heilige Verwaltung
-
-### Design goal
-
-Faith supports political order and administration.
-
-### First safe effect target
-
-A modest empire-management bonus connected to cities following the founded religion.
-
-Preferred first implementation:
-
-- small Loyalty support if technically stable
-
-Fallback implementation:
-
-- small Faith or Gold bonus from Holy Site buildings
-
-### Why fallback exists
-
-Loyalty-related belief modifiers can be more fragile than simple yield modifiers. If local tests show database issues or unclear behavior, start with a simple yield bonus and revisit Loyalty later.
+| Record | German | Type | Current effect |
+| --- | --- | --- | --- |
+| `BELIEF_SACRED_DOMINION_SACRED_ADMINISTRATION` | Heilige Verwaltung | Belief | Temples provide +1 Faith |
+| `BELIEF_SACRED_DOMINION_CHARITABLE_WORKS` | Armenfürsorge | Belief | Shrines and Temples provide +1 Food |
+| `BELIEF_SACRED_DOMINION_PILGRIMAGE_NETWORK` | Pilgernetzwerk | Belief | Temples provide +1 Culture |
+| `POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION` | Zehntverwaltung | Policy | Temples provide +1 Gold while slotted |
+| `POLICY_SACRED_DOMINION_ORDER_PATRONAGE` | Ordensförderung | Policy | Temples provide +1 Faith while slotted |
 
 ---
 
-## 2. Charitable Works
+## Why the effects are small
 
-**Record:** `BELIEF_SACRED_DOMINION_CHARITABLE_WORKS`  
-**German:** Armenfürsorge
+Phase 2 is the first active gameplay pass.
 
-### Design goal
+The effects should be:
 
-Faith infrastructure helps the population.
-
-### First safe effect target
-
-A practical city support bonus from Holy Site buildings.
-
-Preferred first implementation:
-
-- Shrine or Temple gives a small Food, Housing, Amenity or Faith-adjacent city support effect
-
-Fallback implementation:
-
-- Holy Site buildings produce a small amount of Food or Gold
-
-### Balance note
-
-This belief must not become a second Feed the World. It should feel useful, not dominant.
+- easy to understand
+- easy to test
+- easy to remove or rebalance
+- unlikely to break the whole mod
+- not strong enough to dominate existing Civilization VI systems
 
 ---
 
-## 3. Pilgrimage Network
+## Implementation file
 
-**Record:** `BELIEF_SACRED_DOMINION_PILGRIMAGE_NETWORK`  
-**German:** Pilgernetzwerk
+The active modifier SQL lives in:
 
-### Design goal
+```text
+Data/Modifiers.sql
+```
 
-Religious travel and connected holy places strengthen cultural and spiritual reach.
+Base belief records live in:
 
-### First safe effect target
+```text
+Data/Beliefs.sql
+```
 
-A modest Culture or Faith gain connected to Holy Sites or religious buildings.
+Base policy records live in:
 
-Preferred first implementation:
-
-- Holy Sites or religious buildings generate a small Culture or Faith bonus
-
-Fallback implementation:
-
-- simple Gold or Faith bonus from Shrines or Temples
-
-### Later direction
-
-This should later connect to trade routes, pilgrimage centers or religious pressure, but not in the first modifier pass.
+```text
+Data/Policies.sql
+```
 
 ---
 
-## 4. Tithe Administration
+## Local test requirement
 
-**Record:** `POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION`  
-**German:** Zehntverwaltung
+These modifiers are implemented but not locally verified yet.
 
-### Design goal
+Before Phase 2 is marked complete, test:
 
-The state organizes religious income.
-
-### First safe effect target
-
-A modest Gold or Faith bonus from religious infrastructure.
-
-Preferred first implementation:
-
-- Holy Site buildings produce additional Gold
-
-Fallback implementation:
-
-- simple Faith or Gold modifier attached to an existing religious building class
-
-### Balance note
-
-This should compete with normal economic cards, not replace them.
+- mod appears in Additional Content
+- new game starts
+- new beliefs and policies load
+- tooltips match the effects
+- `Database.log` has no Sacred Dominion errors
+- `Localization.log` has no Sacred Dominion errors
 
 ---
 
-## 5. Order Patronage
+## Future improvement ideas
 
-**Record:** `POLICY_SACRED_DOMINION_ORDER_PATRONAGE`  
-**German:** Ordensförderung
+After local validation, later versions may replace or expand the temporary conservative effects:
 
-### Design goal
+### Sacred Administration
 
-The state supports religious orders and improves Faith-to-action conversion.
+Possible later direction:
 
-### First safe effect target
+- loyalty support
+- stability support
+- pressure-based administrative bonus
 
-A modest bonus related to religious units or Faith purchases.
+### Charitable Works
 
-Preferred first implementation:
+Possible later direction:
 
-- reduced cost for religious units if a reliable modifier exists
+- housing or amenity support
+- stronger city-support identity
+- crisis recovery effect
 
-Fallback implementation:
+### Pilgrimage Network
 
-- additional Faith from Holy Site buildings while the card is slotted
+Possible later direction:
 
-### Balance note
+- trade-route interaction
+- tourism or religious pressure
+- stronger culture strategy support
 
-Cost reduction should be conservative. A small Faith bonus may be safer for the first playable version.
+### Tithe Administration
 
----
+Possible later direction:
 
-## Recommended activation order
+- gold from following cities
+- gold from religious pressure
+- stronger religious economy identity
 
-1. Tithe Administration
-2. Charitable Works
-3. Pilgrimage Network
-4. Sacred Administration
-5. Order Patronage
+### Order Patronage
 
-Reason:
+Possible later direction:
 
-Start with simple yield-style effects before testing more fragile loyalty or purchase-cost effects.
-
----
-
-## Phase 2 completion target
-
-Phase 2 can be considered implementation-complete when:
-
-- the five records load without database errors
-- at least three mechanics have conservative working effects
-- English and German tooltips are clear
-- no custom UI is required
-- effects are small enough for early balance testing
+- religious unit cost support
+- Faith purchase support
+- military-religious order interaction
 
 ---
 
