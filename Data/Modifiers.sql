@@ -1,0 +1,27 @@
+-- Sacred Dominion
+-- Modifiers.sql
+--
+-- Primary language: English
+-- German translation: Text/de_DE.xml
+--
+-- Phase 2 modifier file.
+--
+-- Current state:
+-- This file is intentionally safe and does not apply gameplay effects yet.
+--
+-- Purpose:
+-- - keep future modifier work separate from base record creation
+-- - activate modifiers one by one after local testing
+-- - make rollbacks easier if a modifier chain breaks Database.log
+--
+-- Planned activation order:
+-- 1. Tithe Administration
+-- 2. Charitable Works
+-- 3. Pilgrimage Network
+-- 4. Sacred Administration
+-- 5. Order Patronage
+--
+-- See:
+-- Docs/PHASE2_MODIFIERS.md
+--
+-- No gameplay changes are applied by this file yet.
