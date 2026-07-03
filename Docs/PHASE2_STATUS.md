@@ -16,11 +16,11 @@ Phase 2 focuses on:
 
 ## Progress
 
-**Overall progress:** 60%
+**Overall progress:** 72%
 
 ## Last completed step
 
-Added English and German localization for the first three belief concepts and two policy concepts. Added safe SQL scaffolds in `Data/Beliefs.sql` and `Data/Policies.sql`.
+Enabled the basic SQL records for the first three Sacred Dominion beliefs and the first two Sacred Dominion policy cards. No gameplay modifiers are attached yet.
 
 ## Current checklist
 
@@ -32,8 +32,10 @@ Added English and German localization for the first three belief concepts and tw
 - [x] policy SQL safely scaffolded
 - [x] modinfo checked for required files
 - [x] Phase 2 documentation updated
-- [ ] active belief SQL enabled
-- [ ] active policy SQL enabled
+- [x] active belief SQL enabled
+- [x] active policy SQL enabled
+- [ ] basic record load test passed
+- [ ] modifier design selected
 - [ ] ready for local SQL/load test
 - [ ] local Civ VI test passed
 
@@ -54,17 +56,24 @@ Policies:
 
 ---
 
-## Important hold note
+## Current implementation state
 
-The SQL for new beliefs and policies is currently scaffolded but disabled in comments.
+The base records are now active:
 
-Reason: Phase 1 has not yet been tested locally in Civilization VI. The base mod should be confirmed first before activating new database records and modifier chains.
+- `Data/Beliefs.sql` inserts the belief `Types` and `Beliefs` records.
+- `Data/Policies.sql` inserts the policy `Types` and `Policies` records.
 
-Next safe step after the Phase 1 load test:
+No modifiers are attached yet.
 
-1. Enable the basic `Types`, `Beliefs` and `Policies` inserts.
-2. Start a local game and check `Database.log` and `Localization.log`.
-3. Add modifiers only after the basic records load cleanly.
+This means Phase 2 is now ready for a basic database/load test, but not yet for a real gameplay balance test.
+
+---
+
+## Next safe step
+
+1. Run a local Civ VI test.
+2. Check `Database.log` and `Localization.log`.
+3. If the records load cleanly, add conservative modifiers one by one.
 
 ---
 
