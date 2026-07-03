@@ -23,6 +23,40 @@
       <Text>Represents religious division inside cities and empires. High Schism may weaken loyalty, amenities or stability.</Text>
     </Row>
 
+    <!-- Phase 2 beliefs -->
+    <Row Tag="LOC_SACRED_DOMINION_BELIEF_SACRED_ADMINISTRATION_NAME" Language="en_US">
+      <Text>Sacred Administration</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_BELIEF_SACRED_ADMINISTRATION_DESCRIPTION" Language="en_US">
+      <Text>Faith becomes a tool of order. Designed to support loyalty, stability or administrative yields through religious infrastructure.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_BELIEF_CHARITABLE_WORKS_NAME" Language="en_US">
+      <Text>Charitable Works</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_BELIEF_CHARITABLE_WORKS_DESCRIPTION" Language="en_US">
+      <Text>Holy Site infrastructure helps support the population and turns religious investment into practical stability.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_BELIEF_PILGRIMAGE_NETWORK_NAME" Language="en_US">
+      <Text>Pilgrimage Network</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_BELIEF_PILGRIMAGE_NETWORK_DESCRIPTION" Language="en_US">
+      <Text>Religious travel and connected holy places strengthen your empire's cultural and spiritual reach.</Text>
+    </Row>
+
+    <!-- Phase 2 policies -->
+    <Row Tag="LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_NAME" Language="en_US">
+      <Text>Tithe Administration</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_DESCRIPTION" Language="en_US">
+      <Text>Organizes religious income and turns Faith infrastructure into a modest economic advantage.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_NAME" Language="en_US">
+      <Text>Order Patronage</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_DESCRIPTION" Language="en_US">
+      <Text>Supports religious orders and improves the empire's ability to turn Faith into action.</Text>
+    </Row>
+
     <!-- City faith actions / projects -->
     <Row Tag="LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_NAME" Language="en_US">
       <Text>Sermon Campaign</Text>
