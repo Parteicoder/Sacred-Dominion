@@ -1,0 +1,13 @@
+-- Sacred Dominion
+-- Projects.sql
+--
+-- Primary language: English
+-- German translation: Text/de_DE.xml
+--
+-- Phase 1 placeholder.
+-- Future purpose:
+-- - add city-based faith actions as projects
+-- - add sermon campaigns, charitable works, holy order and pilgrimage center mechanics
+-- - connect project names and descriptions through LOC_SACRED_DOMINION_* keys
+
+-- No gameplay changes are applied in Phase 1.
