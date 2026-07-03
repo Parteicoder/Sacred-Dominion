@@ -16,11 +16,11 @@ Phase 2 focuses on:
 
 ## Progress
 
-**Overall progress:** 94%
+**Overall progress:** 96%
 
 ## Last completed step
 
-Implemented conservative gameplay modifiers for all five Phase 2 records and updated English and German tooltips plus README.
+Added `Docs/PHASE2_STATIC_REVIEW.md` and created Issue #5 as the local Civ VI test tracker for Phase 1 and Phase 2.
 
 ## Current checklist
 
@@ -40,6 +40,8 @@ Implemented conservative gameplay modifiers for all five Phase 2 records and upd
 - [x] Phase 2 test checklist created
 - [x] first conservative modifiers implemented
 - [x] README updated to current Phase 2 state
+- [x] static review created
+- [x] local test issue created
 - [ ] basic record load test passed
 - [ ] modifier load test passed
 - [ ] local Civ VI test passed
@@ -73,22 +75,25 @@ This means Phase 2 is implementation-ready for a local SQL/load test.
 
 ---
 
-## Test checklist
+## Test tracking
 
-Test checklist lives in:
+Static review:
+
+```text
+Docs/PHASE2_STATIC_REVIEW.md
+```
+
+Local test checklist:
 
 ```text
 Docs/PHASE2_TEST.md
 ```
 
-Local test should check:
+GitHub test tracker:
 
-- the mod appears and can be enabled
-- a new game starts
-- the new belief and policy records load
-- the new tooltips appear correctly
-- `Database.log` has no Sacred Dominion errors
-- `Localization.log` has no Sacred Dominion errors
+```text
+Issue #5 - Test: Lokaler Civ VI Ladetest fuer Phase 1 und 2
+```
 
 ---
 
