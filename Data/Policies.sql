@@ -4,10 +4,34 @@
 -- Primary language: English
 -- German translation: Text/de_DE.xml
 --
--- Phase 1 placeholder.
--- Future purpose:
--- - add faith-focused policy cards
--- - add modifiers for empire-wide faith usage
--- - connect policy names and descriptions through LOC_SACRED_DOMINION_* keys
+-- Phase 2 scaffold.
+-- These policy concepts are selected and localized, but the actual gameplay SQL remains disabled until the local Phase 1 load test confirms that the base mod loads cleanly.
+--
+-- Reason:
+-- Policy and modifier chains should be activated after the foundation has been tested in Civilization VI logs.
 
--- No gameplay changes are applied in Phase 1.
+-- Phase 2 selected policy IDs:
+-- - POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION
+-- - POLICY_SACRED_DOMINION_ORDER_PATRONAGE
+
+-- Intended localization keys:
+-- - LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_NAME
+-- - LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_DESCRIPTION
+-- - LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_NAME
+-- - LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_DESCRIPTION
+
+-- Implementation draft, disabled until local load test:
+--
+-- INSERT OR IGNORE INTO Types
+--     (Type, Kind)
+-- VALUES
+--     ('POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION', 'KIND_POLICY'),
+--     ('POLICY_SACRED_DOMINION_ORDER_PATRONAGE', 'KIND_POLICY');
+--
+-- INSERT OR IGNORE INTO Policies
+--     (PolicyType, Name, Description, PrereqCivic, GovernmentSlotType)
+-- VALUES
+--     ('POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION', 'LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_NAME', 'LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_DESCRIPTION', 'CIVIC_THEOLOGY', 'SLOT_ECONOMIC'),
+--     ('POLICY_SACRED_DOMINION_ORDER_PATRONAGE', 'LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_NAME', 'LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_DESCRIPTION', 'CIVIC_REFORMED_CHURCH', 'SLOT_ECONOMIC');
+--
+-- Modifier implementation should be added only after checking Database.log in a local game.
