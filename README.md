@@ -20,12 +20,13 @@ Heilige Herrschaft - Glauben neu gedacht
 | Phase 2 - First active faith mechanics | Implemented, local test skipped for now |
 | Phase 3 - City faith actions | Implemented, local test skipped for now |
 | Phase 4 - Sacred decrees | First policy-card pass implemented |
+| Phase 5 - Zeal and Schism | Planning started, no active SQL |
 | Active gameplay effects | Phase 2 effects, Phase 3 projects and Phase 4 decree policies |
 | Primary language | English |
 | German translation | Supported |
 | Custom UI | Not started |
 
-Phase 4 adds the first sacred decrees as special policy cards. This keeps the system playable without custom UI.
+Phase 5 now plans the first tension layer for the mod. It does not add active gameplay SQL yet.
 
 ---
 
@@ -120,6 +121,25 @@ Phase 4 adds the first sacred decrees as special policy cards. This keeps the sy
 
 ---
 
+## Planned Phase 5 tension systems
+
+### Zeal
+
+**German:** Eifer  
+**Purpose:** Represents active religious energy and future faith momentum.
+
+### Schism
+
+**German:** Spaltung  
+**Purpose:** Represents internal religious division and future instability risk.
+
+### Resistance
+
+**German:** Widerstand  
+**Purpose:** Represents pushback against harsh religious rule.
+
+---
+
 ## Project goal
 
 Sacred Dominion makes Faith more active outside a pure religious victory path.
@@ -130,7 +150,7 @@ The design direction:
 - Faith should support economy, food, culture and empire management
 - city-level faith actions should become regular local decisions
 - decree policies should simulate empire-wide faith decisions until custom UI exists
-- deeper systems such as Zeal and Schism come later
+- Zeal and Schism should add risk and pressure later
 - custom UI comes after the gameplay foundation is stable
 
 ---
@@ -158,6 +178,10 @@ Implemented with 4 Holy Site city projects.
 ### Phase 4 - Sacred decrees
 
 Implemented as first policy-card pass with 5 decree policies.
+
+### Phase 5 - Zeal and Schism
+
+Planning started. No active gameplay SQL yet.
 
 ---
 
@@ -192,6 +216,10 @@ Sacred-Dominion/
     ├── PHASE3_TEST.md
     ├── PHASE4_MECHANICS.md
     ├── PHASE4_STATUS.md
+    ├── PHASE4_TEST.md
+    ├── PHASE5_STATUS.md
+    ├── PHASE5_MECHANICS.md
+    ├── PHASE5_IMPLEMENTATION_BOUNDARIES.md
     └── ROADMAP.md
 ```
 
@@ -213,6 +241,6 @@ LOC_SACRED_DOMINION_...
 
 ## Technical caution
 
-Phase 1 to 3 local tests are intentionally skipped for now.
+Local tests are intentionally skipped for now.
 
-Phase 4 is implemented conservatively, but the full mod still needs local Civilization VI validation before it should be considered stable.
+Phase 5 is planning-only. The full mod still needs local Civilization VI validation before it should be considered stable.
