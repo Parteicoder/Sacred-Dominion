@@ -16,11 +16,11 @@ Phase 2 focuses on:
 
 ## Progress
 
-**Overall progress:** 82%
+**Overall progress:** 86%
 
 ## Last completed step
 
-Created `Docs/PHASE2_MODIFIERS.md`, added `Data/Modifiers.sql`, and registered the modifier file in `SacredDominion.modinfo`.
+Added activation markers to `Data/Modifiers.sql` and created `Docs/PHASE2_TEST.md` for the upcoming local Phase 2 record test.
 
 ## Current checklist
 
@@ -36,6 +36,8 @@ Created `Docs/PHASE2_MODIFIERS.md`, added `Data/Modifiers.sql`, and registered t
 - [x] active policy SQL enabled
 - [x] modifier design selected
 - [x] modifier file created and registered
+- [x] modifier activation markers added
+- [x] Phase 2 test checklist created
 - [ ] basic record load test passed
 - [ ] first conservative modifiers implemented
 - [ ] ready for local SQL/load test
@@ -48,13 +50,13 @@ Created `Docs/PHASE2_MODIFIERS.md`, added `Data/Modifiers.sql`, and registered t
 Beliefs:
 
 - Sacred Administration / Heilige Verwaltung
-- Charitable Works / Armenfürsorge
+- Charitable Works / Armenfuersorge
 - Pilgrimage Network / Pilgernetzwerk
 
 Policies:
 
 - Tithe Administration / Zehntverwaltung
-- Order Patronage / Ordensförderung
+- Order Patronage / Ordensfoerderung
 
 ---
 
@@ -64,11 +66,11 @@ The base records are active:
 
 - `Data/Beliefs.sql` inserts the belief `Types` and `Beliefs` records.
 - `Data/Policies.sql` inserts the policy `Types` and `Policies` records.
-- `Data/Modifiers.sql` is loaded by the mod but currently does not apply gameplay effects.
+- `Data/Modifiers.sql` is loaded by the mod and contains activation markers, but currently does not apply gameplay effects.
 
 No modifiers are attached yet.
 
-This means Phase 2 is ready for a basic database/load test and prepared for conservative modifiers.
+This means Phase 2 is ready for a basic record load test and prepared for conservative modifiers.
 
 ---
 
@@ -78,6 +80,12 @@ Modifier planning lives in:
 
 ```text
 Docs/PHASE2_MODIFIERS.md
+```
+
+Test checklist lives in:
+
+```text
+Docs/PHASE2_TEST.md
 ```
 
 Recommended activation order:
