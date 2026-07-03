@@ -6,18 +6,16 @@
 --
 -- Phase 2 gameplay modifiers.
 --
--- Issue #1 fix:
--- The first three Phase 2 mechanics now have small active gameplay effects.
+-- Current Phase 2 effect pass:
+-- All five Phase 2 records now have small active gameplay effects.
 -- These effects are intentionally conservative and easy to test.
 --
 -- Active effects:
 -- - Tithe Administration: Temples provide +1 Gold while the policy is slotted.
 -- - Charitable Works: Shrines and Temples provide +1 Food for cities using the belief.
 -- - Pilgrimage Network: Temples provide +1 Culture for cities using the belief.
---
--- Still pending for later passes:
--- - Sacred Administration
--- - Order Patronage
+-- - Sacred Administration: Temples provide +1 Faith for cities using the belief.
+-- - Order Patronage: Temples provide +1 Faith while the policy is slotted.
 
 -------------------------------------------------------------------------------
 -- Policy: Tithe Administration
@@ -94,7 +92,45 @@ VALUES
     ('SACRED_DOMINION_PILGRIMAGE_NETWORK_TEMPLE_CULTURE', 'Amount', '1');
 
 -------------------------------------------------------------------------------
--- Reserved for later passes
+-- Belief: Sacred Administration
 -------------------------------------------------------------------------------
--- Sacred Administration: planned stability, loyalty or fallback yield bonus.
--- Order Patronage: planned Faith-to-action or fallback Faith support bonus.
+
+INSERT OR IGNORE INTO BeliefModifiers
+    (BeliefType, ModifierID)
+VALUES
+    ('BELIEF_SACRED_DOMINION_SACRED_ADMINISTRATION', 'SACRED_DOMINION_SACRED_ADMINISTRATION_ATTACH_TEMPLE_FAITH');
+
+INSERT OR IGNORE INTO Modifiers
+    (ModifierId, ModifierType, SubjectRequirementSetId)
+VALUES
+    ('SACRED_DOMINION_SACRED_ADMINISTRATION_ATTACH_TEMPLE_FAITH', 'MODIFIER_ALL_CITIES_ATTACH_MODIFIER', NULL),
+    ('SACRED_DOMINION_SACRED_ADMINISTRATION_TEMPLE_FAITH', 'MODIFIER_SINGLE_CITY_ADJUST_BUILDING_YIELD_CHANGE', NULL);
+
+INSERT OR IGNORE INTO ModifierArguments
+    (ModifierId, Name, Value)
+VALUES
+    ('SACRED_DOMINION_SACRED_ADMINISTRATION_ATTACH_TEMPLE_FAITH', 'ModifierId', 'SACRED_DOMINION_SACRED_ADMINISTRATION_TEMPLE_FAITH'),
+    ('SACRED_DOMINION_SACRED_ADMINISTRATION_TEMPLE_FAITH', 'BuildingType', 'BUILDING_TEMPLE'),
+    ('SACRED_DOMINION_SACRED_ADMINISTRATION_TEMPLE_FAITH', 'YieldType', 'YIELD_FAITH'),
+    ('SACRED_DOMINION_SACRED_ADMINISTRATION_TEMPLE_FAITH', 'Amount', '1');
+
+-------------------------------------------------------------------------------
+-- Policy: Order Patronage
+-------------------------------------------------------------------------------
+
+INSERT OR IGNORE INTO PolicyModifiers
+    (PolicyType, ModifierId)
+VALUES
+    ('POLICY_SACRED_DOMINION_ORDER_PATRONAGE', 'SACRED_DOMINION_ORDER_PATRONAGE_TEMPLE_FAITH');
+
+INSERT OR IGNORE INTO Modifiers
+    (ModifierId, ModifierType, SubjectRequirementSetId)
+VALUES
+    ('SACRED_DOMINION_ORDER_PATRONAGE_TEMPLE_FAITH', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE', NULL);
+
+INSERT OR IGNORE INTO ModifierArguments
+    (ModifierId, Name, Value)
+VALUES
+    ('SACRED_DOMINION_ORDER_PATRONAGE_TEMPLE_FAITH', 'BuildingType', 'BUILDING_TEMPLE'),
+    ('SACRED_DOMINION_ORDER_PATRONAGE_TEMPLE_FAITH', 'YieldType', 'YIELD_FAITH'),
+    ('SACRED_DOMINION_ORDER_PATRONAGE_TEMPLE_FAITH', 'Amount', '1');
