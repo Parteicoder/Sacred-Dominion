@@ -127,12 +127,15 @@ Es gibt 4 Holy-Site-Projekte:
 - Holy Order / Heilige Ordnung: Produktion zu Glauben und Gold
 - Pilgrimage Center / Pilgerzentrum: Produktion zu Kultur und Glauben
 
+Zusätzlich wurde die Balance-Dokumentation für Phase 2 und 3 aktualisiert.
+
 ### Dateien
 
 ```text
 Data/Projects.sql
 Text/en_US.xml
 Text/de_DE.xml
+Docs/BALANCING.md
 Docs/PHASE3_STATUS.md
 Docs/PHASE3_MECHANICS.md
 Docs/PHASE3_TEST.md
