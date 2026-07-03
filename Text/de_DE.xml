@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+    <!-- Mod-Metadaten -->
+    <Row Tag="LOC_SACRED_DOMINION_NAME" Language="de_DE">
+      <Text>Sacred Dominion</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DESCRIPTION" Language="de_DE">
+      <Text>Eine Glaubensüberarbeitung für Civilization VI, die Glauben zu einer aktiven Ressource für Herrschaft, Stabilität, Kultur und religiösen Druck macht.</Text>
+    </Row>
+
+    <!-- Grundbegriffe -->
+    <Row Tag="LOC_SACRED_DOMINION_CONCEPT_ZEAL_NAME" Language="de_DE">
+      <Text>Eifer</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_CONCEPT_ZEAL_DESCRIPTION" Language="de_DE">
+      <Text>Stellt die aktive religiöse Energie deines Reiches dar. Hoher Eifer kann glaubensbasierte Effekte stärken, aber auch religiöse Spannungen erhöhen.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_CONCEPT_SCHISM_NAME" Language="de_DE">
+      <Text>Spaltung</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_CONCEPT_SCHISM_DESCRIPTION" Language="de_DE">
+      <Text>Stellt religiöse Teilung innerhalb von Städten und Reichen dar. Hohe Spaltung kann Loyalität, Annehmlichkeiten oder Stabilität schwächen.</Text>
+    </Row>
+
+    <!-- Stadtaktionen / Projekte für Glauben -->
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_NAME" Language="de_DE">
+      <Text>Predigtkampagne</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_SERMON_CAMPAIGN_DESCRIPTION" Language="de_DE">
+      <Text>Erhöht den religiösen Druck dieser Stadt für begrenzte Zeit.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_CHARITY_NAME" Language="de_DE">
+      <Text>Armenfürsorge</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_CHARITY_DESCRIPTION" Language="de_DE">
+      <Text>Nutzt Glauben, um die Bevölkerung zu unterstützen und die lokale Stabilität zu verbessern.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_HOLY_ORDER_NAME" Language="de_DE">
+      <Text>Heilige Ordnung</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_HOLY_ORDER_DESCRIPTION" Language="de_DE">
+      <Text>Stärkt Loyalität und religiöse Ordnung in dieser Stadt.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_PILGRIMAGE_CENTER_NAME" Language="de_DE">
+      <Text>Pilgerzentrum</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_PROJECT_PILGRIMAGE_CENTER_DESCRIPTION" Language="de_DE">
+      <Text>Macht diese Stadt zu einem lokalen Zentrum für Pilger, Kultur und religiösen Einfluss.</Text>
+    </Row>
+
+    <!-- Dekrete -->
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_TITHE_NAME" Language="de_DE">
+      <Text>Zehnt ausrufen</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_TITHE_DESCRIPTION" Language="de_DE">
+      <Text>Städte mit deiner Mehrheitsreligion erzeugen zusätzliches Gold.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_HOLY_FESTIVALS_NAME" Language="de_DE">
+      <Text>Heilige Feste</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_HOLY_FESTIVALS_DESCRIPTION" Language="de_DE">
+      <Text>Erhöht Kultur, Annehmlichkeiten und Loyalität in Städten, die durch deine Religion geprägt sind.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_MISSIONARY_MANDATE_NAME" Language="de_DE">
+      <Text>Missionsmandat</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_MISSIONARY_MANDATE_DESCRIPTION" Language="de_DE">
+      <Text>Verstärkt den religiösen Druck durch Handelsrouten und religiöse Einheiten.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_MOBILIZE_ORDERS_NAME" Language="de_DE">
+      <Text>Orden mobilisieren</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_MOBILIZE_ORDERS_DESCRIPTION" Language="de_DE">
+      <Text>Senkt die Glaubenskosten ausgewählter religiöser oder militärischer Käufe.</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_WONDER_VENERATION_NAME" Language="de_DE">
+      <Text>Wunderverehrung</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_DECREE_WONDER_VENERATION_DESCRIPTION" Language="de_DE">
+      <Text>Weltwunder und Heilige Stätten erzeugen zusätzlichen Tourismus oder religiösen Einfluss.</Text>
+    </Row>
+  </LocalizedText>
+</GameData>
