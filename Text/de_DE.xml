@@ -22,6 +22,12 @@
     <Row Tag="LOC_SACRED_DOMINION_CONCEPT_SCHISM_DESCRIPTION" Language="de_DE">
       <Text>Stellt religiöse Teilung innerhalb von Städten und Reichen dar. Hohe Spaltung kann Loyalität, Annehmlichkeiten oder Stabilität schwächen.</Text>
     </Row>
+    <Row Tag="LOC_SACRED_DOMINION_CONCEPT_RESISTANCE_NAME" Language="de_DE">
+      <Text>Widerstand</Text>
+    </Row>
+    <Row Tag="LOC_SACRED_DOMINION_CONCEPT_RESISTANCE_DESCRIPTION" Language="de_DE">
+      <Text>Stellt Gegenwehr gegen harte Glaubensherrschaft dar. Hoher Widerstand kann später Stabilität, Ordnung oder Dekrete schwächen.</Text>
+    </Row>
 
     <!-- Phase-2-Glaubenssätze -->
     <Row Tag="LOC_SACRED_DOMINION_BELIEF_SACRED_ADMINISTRATION_NAME" Language="de_DE">
