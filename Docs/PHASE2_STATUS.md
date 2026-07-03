@@ -16,11 +16,11 @@ Phase 2 focuses on:
 
 ## Progress
 
-**Overall progress:** 86%
+**Overall progress:** 94%
 
 ## Last completed step
 
-Added activation markers to `Data/Modifiers.sql` and created `Docs/PHASE2_TEST.md` for the upcoming local Phase 2 record test.
+Implemented conservative gameplay modifiers for all five Phase 2 records and updated English and German tooltips plus README.
 
 ## Current checklist
 
@@ -38,25 +38,26 @@ Added activation markers to `Data/Modifiers.sql` and created `Docs/PHASE2_TEST.m
 - [x] modifier file created and registered
 - [x] modifier activation markers added
 - [x] Phase 2 test checklist created
+- [x] first conservative modifiers implemented
+- [x] README updated to current Phase 2 state
 - [ ] basic record load test passed
-- [ ] first conservative modifiers implemented
-- [ ] ready for local SQL/load test
+- [ ] modifier load test passed
 - [ ] local Civ VI test passed
 
 ---
 
-## Selected Phase 2 mechanics
+## Active Phase 2 mechanics
 
 Beliefs:
 
-- Sacred Administration / Heilige Verwaltung
-- Charitable Works / Armenfuersorge
-- Pilgrimage Network / Pilgernetzwerk
+- Sacred Administration / Heilige Verwaltung: Temples provide +1 Faith.
+- Charitable Works / Armenfürsorge: Shrines and Temples provide +1 Food.
+- Pilgrimage Network / Pilgernetzwerk: Temples provide +1 Culture.
 
 Policies:
 
-- Tithe Administration / Zehntverwaltung
-- Order Patronage / Ordensfoerderung
+- Tithe Administration / Zehntverwaltung: Temples provide +1 Gold while this policy is slotted.
+- Order Patronage / Ordensförderung: Temples provide +1 Faith while this policy is slotted.
 
 ---
 
@@ -66,21 +67,13 @@ The base records are active:
 
 - `Data/Beliefs.sql` inserts the belief `Types` and `Beliefs` records.
 - `Data/Policies.sql` inserts the policy `Types` and `Policies` records.
-- `Data/Modifiers.sql` is loaded by the mod and contains activation markers, but currently does not apply gameplay effects.
+- `Data/Modifiers.sql` now applies the first conservative effect pass.
 
-No modifiers are attached yet.
-
-This means Phase 2 is ready for a basic record load test and prepared for conservative modifiers.
+This means Phase 2 is implementation-ready for a local SQL/load test.
 
 ---
 
-## Modifier activation plan
-
-Modifier planning lives in:
-
-```text
-Docs/PHASE2_MODIFIERS.md
-```
+## Test checklist
 
 Test checklist lives in:
 
@@ -88,21 +81,20 @@ Test checklist lives in:
 Docs/PHASE2_TEST.md
 ```
 
-Recommended activation order:
+Local test should check:
 
-1. Tithe Administration
-2. Charitable Works
-3. Pilgrimage Network
-4. Sacred Administration
-5. Order Patronage
+- the mod appears and can be enabled
+- a new game starts
+- the new belief and policy records load
+- the new tooltips appear correctly
+- `Database.log` has no Sacred Dominion errors
+- `Localization.log` has no Sacred Dominion errors
 
 ---
 
-## Next safe step
+## Hold note
 
-1. Run a local Civ VI test.
-2. Check `Database.log` and `Localization.log`.
-3. If the records load cleanly, add conservative modifiers one by one.
+Phase 2 should not be marked as 100% complete until the local Civ VI test passes.
 
 ---
 
