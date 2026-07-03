@@ -1,0 +1,13 @@
+-- Sacred Dominion
+-- Beliefs.sql
+--
+-- Primary language: English
+-- German translation: Text/de_DE.xml
+--
+-- Phase 1 placeholder.
+-- Future purpose:
+-- - add new belief definitions
+-- - adjust faith-related belief modifiers
+-- - connect belief names and descriptions through LOC_SACRED_DOMINION_* keys
+
+-- No gameplay changes are applied in Phase 1.
