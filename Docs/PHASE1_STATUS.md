@@ -8,18 +8,18 @@ Goal: The mod should be recognized by Civilization VI, be activatable in Additio
 
 ## Progress
 
-**Overall progress:** 10%
+**Overall progress:** 35%
 
 ## Last completed step
 
-Created this status tracker so progress can be followed inside the repository.
+Created the base placeholder SQL files in `Data/`: `Beliefs.sql`, `Policies.sql`, `Buildings.sql`, and `Projects.sql`.
 
 ## Current checklist
 
 - [x] Phase 1 status tracker created
 - [ ] `SacredDominion.modinfo` created
-- [ ] base folder structure created through actual files
-- [ ] placeholder SQL files created
+- [x] base folder structure created through actual files
+- [x] placeholder SQL files created
 - [ ] localization files connected in `.modinfo`
 - [ ] data files connected in `.modinfo`
 - [ ] documentation updated with current Phase 1 status
