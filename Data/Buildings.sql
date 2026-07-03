@@ -1,0 +1,13 @@
+-- Sacred Dominion
+-- Buildings.sql
+--
+-- Primary language: English
+-- German translation: Text/de_DE.xml
+--
+-- Phase 1 placeholder.
+-- Future purpose:
+-- - add dummy buildings if needed for simulated states
+-- - add Holy Site related building modifiers
+-- - connect building names and descriptions through LOC_SACRED_DOMINION_* keys
+
+-- No gameplay changes are applied in Phase 1.
