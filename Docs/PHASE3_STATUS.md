@@ -16,11 +16,11 @@ Phase 3 focuses on:
 
 ## Progress
 
-**Overall progress:** 82%
+**Overall progress:** 88%
 
 ## Last completed step
 
-Added static review notes to this status file. Phase 3 is now implementation-ready for a later local Civilization VI test.
+Updated `Docs/BALANCING.md` and `Docs/ROADMAP.md` so the documentation now reflects the real Phase 2 and Phase 3 implementation state.
 
 ## Current checklist
 
@@ -34,6 +34,8 @@ Added static review notes to this status file. Phase 3 is now implementation-rea
 - [x] Phase 3 test checklist created
 - [x] local test issue created
 - [x] static review notes added
+- [x] balancing document updated
+- [x] roadmap updated
 - [ ] local Civ VI test passed
 
 ---
@@ -57,6 +59,8 @@ Checked before local test:
 - English project text exists in `Text/en_US.xml`.
 - German project text exists in `Text/de_DE.xml`.
 - README includes Phase 3.
+- `Docs/BALANCING.md` includes Phase 3 balance notes.
+- `Docs/ROADMAP.md` reflects the current implementation state.
 - Issue #6 tracks the later local test.
 
 Main thing to verify later:
