@@ -2,7 +2,7 @@
 
 This document tracks early balancing rules for Sacred Dominion.
 
-Phase 1 does not apply gameplay balance yet. These notes prepare later phases.
+The current implementation has active Phase 2 belief and policy effects plus Phase 3 Holy Site city projects. Local Civilization VI validation is still pending.
 
 ---
 
@@ -50,7 +50,7 @@ Faith should not simply buy everything. It should influence systems that feel co
 
 ### 1. Faith effects need costs
 
-Strong effects should cost enough Faith that the player must choose between actions.
+Strong effects should cost enough Faith or Production that the player must choose between actions.
 
 ### 2. No universal best option
 
@@ -62,7 +62,7 @@ Faith should help culture, diplomacy, domination and science strategies, but rel
 
 ### 4. Risks should create choices, not annoyance
 
-Zeal and Schism should add pressure and decision-making. They should not become a random punishment fog.
+Zeal and Schism should add pressure and decision-making later. They should not become a random punishment fog.
 
 ### 5. AI should survive the system
 
@@ -70,17 +70,30 @@ Early versions should use mechanics the AI can at least passively benefit from.
 
 ---
 
-## First rough effect ranges
+## Active Phase 2 effect pass
 
-These are only starting points for later testing.
+| Mechanic | Type | Current effect | Balance intent |
+| --- | --- | --- | --- |
+| Sacred Administration | Belief | Temples +1 Faith | safe fallback for later stability theme |
+| Charitable Works | Belief | Shrines and Temples +1 Food | small population support |
+| Pilgrimage Network | Belief | Temples +1 Culture | small culture bridge |
+| Tithe Administration | Policy | Temples +1 Gold while slotted | modest economy card |
+| Order Patronage | Policy | Temples +1 Faith while slotted | modest faith card |
 
-| Mechanic type | Early target range |
-| --- | --- |
-| small city action | 80-150 Faith |
-| medium city action | 150-300 Faith |
-| strong city action | 300-500 Faith |
-| empire decree | 400-900 Faith |
-| major empire effect | 900+ Faith |
+These are intentionally low numbers. They are first-pass effects, not final fantasy cathedral machinery.
+
+---
+
+## Active Phase 3 project pass
+
+| Project | Requirement | Conversion |
+| --- | --- | --- |
+| Sermon Campaign | Holy Site | Production to Faith |
+| Charitable Works | Holy Site | Production to Food |
+| Holy Order | Holy Site | Production to Faith and Gold |
+| Pilgrimage Center | Holy Site | Production to Culture and Faith |
+
+Phase 3 projects should feel like optional local actions, not mandatory build queue chores.
 
 ---
 
@@ -94,15 +107,42 @@ Potential balance dangers:
 - religious pressure becoming impossible to counter
 - city projects becoming repetitive button spam
 - AI not understanding new systems
+- project yields becoming stronger than normal district projects
+- too many bonuses stacking on Temple too early
 
 ---
 
-## Phase 2 first balance target
+## Local test balance questions
 
-The first real gameplay version should be modest:
+When testing Phase 2 and Phase 3, answer:
 
-- a few belief changes
-- a few policy cards
-- no extreme yields
-- no permanent empire-wide snowball engine
-- easy rollback if a mechanic breaks loading
+- Do the Temple bonuses feel too stacked?
+- Does Charitable Works create too much early growth?
+- Do the new projects appear too early or too often?
+- Does the AI spam the projects?
+- Are the policy cards worth using without becoming automatic picks?
+- Are the tooltips clear enough in English and German?
+
+---
+
+## Before stronger effects
+
+Do not add stronger loyalty, tourism, cost reduction or pressure effects until:
+
+- Phase 1 loads cleanly
+- Phase 2 records load cleanly
+- Phase 2 modifiers load cleanly
+- Phase 3 projects appear correctly
+- logs are clean
+
+---
+
+## Later balance direction
+
+After local validation, the temporary safe effects can be refined:
+
+- Sacred Administration can move toward Loyalty or stability.
+- Order Patronage can move toward religious unit support.
+- Pilgrimage Network can move toward trade routes, tourism or pressure.
+- Holy Order can later gain a real order/stability identity.
+- Charitable Works can later use Amenities or Housing if stable.
