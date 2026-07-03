@@ -8,11 +8,11 @@ Goal: The mod should be recognized by Civilization VI, be activatable in Additio
 
 ## Progress
 
-**Overall progress:** 70%
+**Overall progress:** 85%
 
 ## Last completed step
 
-Created and corrected `SacredDominion.modinfo`. The text component now uses `LocalizedText`, and the base SQL files are connected through `UpdateDatabase`.
+Created `Docs/LOAD_TEST.md` with the local Civilization VI test checklist, including install path, expected behavior and log files to inspect.
 
 ## Current checklist
 
@@ -23,7 +23,7 @@ Created and corrected `SacredDominion.modinfo`. The text component now uses `Loc
 - [x] localization files connected in `.modinfo`
 - [x] data files connected in `.modinfo`
 - [x] documentation updated with current Phase 1 status
-- [ ] local Civ VI load test instructions created
+- [x] local Civ VI load test instructions created
 - [ ] ready for local Civ VI load test
 
 ---
