@@ -8,11 +8,11 @@ Goal: The mod should be recognized by Civilization VI, be activatable in Additio
 
 ## Progress
 
-**Overall progress:** 85%
+**Overall progress:** 92%
 
 ## Last completed step
 
-Created `Docs/LOAD_TEST.md` with the local Civilization VI test checklist, including install path, expected behavior and log files to inspect.
+Created `Docs/DESIGN.md` and `Docs/BALANCING.md` so the foundation now has design rules and early balancing guidance.
 
 ## Current checklist
 
@@ -24,7 +24,10 @@ Created `Docs/LOAD_TEST.md` with the local Civilization VI test checklist, inclu
 - [x] data files connected in `.modinfo`
 - [x] documentation updated with current Phase 1 status
 - [x] local Civ VI load test instructions created
-- [ ] ready for local Civ VI load test
+- [x] initial design document created
+- [x] initial balancing document created
+- [x] ready for local Civ VI load test
+- [ ] local Civ VI load test passed
 
 ---
 
@@ -33,3 +36,5 @@ Created `Docs/LOAD_TEST.md` with the local Civilization VI test checklist, inclu
 English is the primary language of the mod. German is maintained as a full translation.
 
 The mod currently contains no gameplay changes. Phase 1 is intentionally only a safe loading foundation.
+
+Phase 1 is ready for a local Civilization VI load test. It cannot be marked as fully complete until the mod has been copied into the local Civ VI Mods folder and checked in-game.
