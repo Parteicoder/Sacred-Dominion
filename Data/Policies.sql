@@ -4,34 +4,34 @@
 -- Primary language: English
 -- German translation: Text/de_DE.xml
 --
--- Phase 2 scaffold.
--- These policy concepts are selected and localized, but the actual gameplay SQL remains disabled until the local Phase 1 load test confirms that the base mod loads cleanly.
+-- Phase 2: policy base records.
+-- These records define the first Sacred Dominion policy concepts.
 --
--- Reason:
--- Policy and modifier chains should be activated after the foundation has been tested in Civilization VI logs.
+-- Important:
+-- This file currently creates the policy records only.
+-- No gameplay modifiers are attached yet.
+-- The next step after local testing is to attach conservative, easy-to-debug modifiers.
 
 -- Phase 2 selected policy IDs:
 -- - POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION
 -- - POLICY_SACRED_DOMINION_ORDER_PATRONAGE
 
--- Intended localization keys:
--- - LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_NAME
--- - LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_DESCRIPTION
--- - LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_NAME
--- - LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_DESCRIPTION
+INSERT OR IGNORE INTO Types
+    (Type, Kind)
+VALUES
+    ('POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION', 'KIND_POLICY'),
+    ('POLICY_SACRED_DOMINION_ORDER_PATRONAGE', 'KIND_POLICY');
 
--- Implementation draft, disabled until local load test:
+INSERT OR IGNORE INTO Policies
+    (PolicyType, Name, Description, PrereqCivic, GovernmentSlotType)
+VALUES
+    ('POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION', 'LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_NAME', 'LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_DESCRIPTION', 'CIVIC_THEOLOGY', 'SLOT_ECONOMIC'),
+    ('POLICY_SACRED_DOMINION_ORDER_PATRONAGE', 'LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_NAME', 'LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_DESCRIPTION', 'CIVIC_REFORMED_CHURCH', 'SLOT_ECONOMIC');
+
+-- Planned modifier direction after record load test:
 --
--- INSERT OR IGNORE INTO Types
---     (Type, Kind)
--- VALUES
---     ('POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION', 'KIND_POLICY'),
---     ('POLICY_SACRED_DOMINION_ORDER_PATRONAGE', 'KIND_POLICY');
+-- Tithe Administration:
+-- - modest Gold or Faith from religious infrastructure.
 --
--- INSERT OR IGNORE INTO Policies
---     (PolicyType, Name, Description, PrereqCivic, GovernmentSlotType)
--- VALUES
---     ('POLICY_SACRED_DOMINION_TITHE_ADMINISTRATION', 'LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_NAME', 'LOC_SACRED_DOMINION_POLICY_TITHE_ADMINISTRATION_DESCRIPTION', 'CIVIC_THEOLOGY', 'SLOT_ECONOMIC'),
---     ('POLICY_SACRED_DOMINION_ORDER_PATRONAGE', 'LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_NAME', 'LOC_SACRED_DOMINION_POLICY_ORDER_PATRONAGE_DESCRIPTION', 'CIVIC_REFORMED_CHURCH', 'SLOT_ECONOMIC');
---
--- Modifier implementation should be added only after checking Database.log in a local game.
+-- Order Patronage:
+-- - improved Faith-to-action conversion, likely through religious unit or purchase support.
