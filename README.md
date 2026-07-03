@@ -1,292 +1,138 @@
 # Sacred Dominion
 
-**Sacred Dominion** ist ein Konzept- und Gameplay-Rework für *Sid Meier’s Civilization VI*, das Glauben aus seiner eher passiven Rolle holt und zu einer aktiven Machtressource macht.
+**Sacred Dominion** is a faith-focused gameplay rework for *Sid Meier's Civilization VI*.
 
-Statt Glauben nur anzusammeln und gelegentlich Missionare, Apostel, Naturforscher oder Rockbands zu kaufen, soll er als politisches, gesellschaftliches und strategisches Werkzeug funktionieren: für Stadtpolitik, religiösen Einfluss, Loyalität, innere Stabilität, kulturelle Stärke und Reichsentscheidungen.
+The mod is built with **English as the primary language** and **German as a full translation**.
 
-> Arbeitstitel: **Sacred Dominion: A Faith Rework for Civilization VI**  
-> Deutscher Untertitel: **Heilige Herrschaft – Glauben neu gedacht**
+German subtitle:
 
----
-
-## Grundidee
-
-In Civilization VI ist Glauben oft eine starke, aber sehr spezielle Ressource. Ohne passende Religion, Glaubenssätze, Zeitalterboni oder Siegstrategie kann sie sich passiv anfühlen.
-
-**Sacred Dominion** soll daraus ein aktives System machen:
-
-- Glauben wird nicht nur gespeichert, sondern eingesetzt.
-- Religion wird nicht nur verbreitet, sondern verwaltet.
-- Städte bekommen eigene Glaubensentscheidungen.
-- Religiöser Einfluss wird sichtbarer und planbarer.
-- Starker Glaubenseinsatz bringt Vorteile, aber auch Risiken.
-
-Kurz gesagt: Glauben soll nicht nur Weihrauch im Lagerraum sein, sondern ein echter Hebel für Herrschaft, Ordnung, Kultur und Konflikt.
+```text
+Heilige Herrschaft - Glauben neu gedacht
+```
 
 ---
 
-## Designziele
+## Current status
 
-### 1. Glauben aktiver machen
-
-Der Spieler soll regelmäßig sinnvolle Entscheidungen mit Glauben treffen können, auch wenn er nicht direkt auf einen Religionssieg spielt.
-
-Beispiele:
-
-- Städte stabilisieren
-- Loyalität stärken
-- religiöse Spannungen senken
-- kulturelle oder wirtschaftliche Impulse setzen
-- Missionierung gezielt planen
-- Reichsweite Glaubensdekrete auslösen
-
-### 2. Glauben für mehrere Siegtypen nutzbar machen
-
-Sacred Dominion soll Glauben nicht nur für Religion interessant machen.
-
-Mögliche Rollen je Siegtyp:
-
-| Siegtyp | Rolle von Glauben |
+| Area | Status |
 | --- | --- |
-| Religion | Bekehrung, theologischer Kampf, Glaubensdruck |
-| Kultur | Pilgerorte, Reliquien, Feste, Tourismus |
-| Herrschaft | Orden, Loyalität in eroberten Städten, Kriegsmüdigkeit senken |
-| Wissenschaft | Klösterliche Forschung, Bildungsorden, Große Persönlichkeiten |
-| Diplomatie | Friedensmissionen, Katastrophenhilfe, Stabilitätsboni |
+| Phase 1 - Mod foundation | Ready for local load test |
+| Phase 2 - First active faith mechanics | In progress |
+| Active gameplay effects | 3 small Phase 2 effects implemented |
+| Primary language | English |
+| German translation | Supported |
+| Custom UI | Not started |
+| Local Civ VI test | Pending |
 
-### 3. Mehr Risiko und Spannung
+Phase 1 is structurally ready, but it is not marked as fully complete until the mod has been copied into the local Civilization VI Mods folder and tested in-game.
 
-Ein aktives Glaubenssystem soll nicht einfach ein zweites Goldsystem werden. Starker religiöser Druck kann Nebenwirkungen erzeugen.
-
-Mögliche Risikoachsen:
-
-- **Spaltung**: entsteht durch religiös gemischte Städte oder konkurrierende Religionen.
-- **Eifer**: verstärkt Glaubenseffekte, kann aber instabil werden.
-- **Widerstand**: Bevölkerung oder Eliten reagieren negativ auf zu harte religiöse Kontrolle.
-
-Das Ziel ist kein Strafsystem, sondern ein strategischer Balanceakt: Macht hat Gewicht.
+Phase 2 now includes the first active gameplay modifiers. These effects are intentionally small, conservative and easy to debug.
 
 ---
 
-## Geplante Kernsysteme
+## What Sacred Dominion does
 
-## Glaubensaktionen in Städten
+Civilization VI often treats Faith as a strong but specialized resource. Without a religious victory plan, specific beliefs, Monumentality, Naturalists, Rock Bands or certain civilization abilities, Faith can feel passive.
 
-Jede Stadt soll eigene Glaubensaktionen erhalten. Diese Aktionen kosten Glauben und erzeugen zeitlich begrenzte oder dauerhafte Effekte.
+Sacred Dominion turns Faith into a more active empire-management tool:
 
-Beispiele:
+- religious infrastructure matters outside pure religious victory
+- Faith-related choices support economy, food and culture
+- future phases will add deeper systems such as decrees, city actions, Zeal and Schism
+- custom UI comes later, after the gameplay foundation is stable
 
-### Predigtkampagne
-
-**Kosten:** Glauben  
-**Effekt:** Erhöht religiösen Druck der Stadt für mehrere Runden.  
-**Risiko:** Kann Spaltung erhöhen, wenn fremde Religionen stark vertreten sind.
-
-### Armenfürsorge
-
-**Kosten:** Glauben  
-**Effekt:** Erhöht Zufriedenheit, Nahrung oder Wohnraum.  
-**Nutzen:** Besonders stark in großen Städten oder Krisenphasen.
-
-### Heilige Ordnung
-
-**Kosten:** Glauben  
-**Effekt:** Erhöht Loyalität und senkt Unruhe.  
-**Risiko:** Kann Kultur oder Wissenschaft kurzfristig bremsen.
-
-### Pilgerzentrum ausrufen
-
-**Kosten:** Glauben  
-**Effekt:** Erhöht Tourismus, Gold und religiösen Druck.  
-**Nutzen:** Stark für Kultur- und Religionsstrategien.
+The design goal is not to make Faith a second version of Gold. Faith should feel like religious authority, cultural legitimacy, social support and political pressure.
 
 ---
 
-## Glaubensdekrete
+## Active Phase 2 mechanics
 
-Glaubensdekrete sind reichsweite Entscheidungen mit Cooldown. Sie sollen sich wie politische Großentscheidungen anfühlen.
+The first gameplay pass adds three small effects.
 
-Beispiele:
+### Tithe Administration
 
-### Zehnt ausrufen
+**Type:** Economic policy card  
+**German:** Zehntverwaltung  
+**Current effect:** Temples provide **+1 Gold** while this policy is slotted.
 
-Städte mit deiner Mehrheitsreligion erzeugen zusätzliches Gold.
+### Charitable Works
 
-Möglicher Nachteil: gemischt religiöse Städte verlieren Zufriedenheit.
+**Type:** Belief  
+**German:** Armenfürsorge  
+**Current effect:** Shrines and Temples provide **+1 Food**.
 
-### Heilige Feste
+### Pilgrimage Network
 
-Erhöht Kultur, Zufriedenheit und Loyalität im Reich für mehrere Runden.
-
-### Missionare entsenden
-
-Handelsrouten verbreiten deine Religion stärker.
-
-Möglicher Nachteil: diplomatische Spannungen mit Zivilisationen anderer Religionen.
-
-### Orden fördern
-
-Religiöse oder militärische Einheiten können günstiger mit Glauben gekauft werden.
-
-### Wunderverehrung
-
-Weltwunder und Heilige Stätten erzeugen zusätzlichen Tourismus.
+**Type:** Belief  
+**German:** Pilgernetzwerk  
+**Current effect:** Temples provide **+1 Culture**.
 
 ---
 
-## Glaubensimpulse
+## Phase 2 records reserved for later effects
 
-Glaubensimpulse sind aktive Spezialeffekte, die in größeren Abständen ausgelöst werden können.
+These records exist and are localized, but their gameplay effects are intentionally reserved for a later pass.
 
-Beispiele:
+### Sacred Administration
 
-- **Welle der Bekehrung**: Städte deiner Religion senden zusätzlichen Glaubensdruck aus.
-- **Zeit der Einkehr**: Zufriedenheit und Loyalität steigen.
-- **Heilige Arbeit**: Produktion in Städten mit Heiliger Stätte steigt.
-- **Märtyrererzählung**: Reliquien, Kultur und Tourismus werden verstärkt.
-- **Orden mobilisieren**: Glaubenskäufe für bestimmte Einheiten werden günstiger.
+**Type:** Belief  
+**German:** Heilige Verwaltung  
+**Planned direction:** stability, loyalty or administrative yield support.
 
----
+### Order Patronage
 
-## Religiöse Einheiten überarbeiten
-
-Religiöse Einheiten sollen mehr Rollen bekommen als nur „Ladung benutzen und verschwinden“.
-
-### Missionar
-
-Mögliche Aktionen:
-
-- Predigen
-- Gemeinde stärken
-- fremden religiösen Druck leicht schwächen
-
-### Apostel
-
-Mögliche Aktionen:
-
-- Dogma verkünden
-- Ketzerprozess auslösen
-- Synode einberufen
-
-### Guru
-
-Mögliche Aktionen:
-
-- religiöse Einheiten heilen
-- Spannungen senken
-- Städte kurzfristig segnen
+**Type:** Economic policy card  
+**German:** Ordensförderung  
+**Planned direction:** Faith-to-action support, religious order support or a conservative Faith bonus.
 
 ---
 
-## UI-Vision
+## Project phases
 
-Sacred Dominion ist als Gameplay-Rework mit eigener Benutzerführung gedacht.
+Detailed roadmap:
 
-Wünschenswerte UI-Elemente:
+```text
+Docs/ROADMAP.md
+```
 
-### Glaubensübersicht
+### Phase 1 - Mod foundation
 
-Eine erweiterte Anzeige für:
+Goal: Civilization VI recognizes and loads the mod.
 
-- aktueller Glaubensvorrat
-- Glauben pro Runde
-- Eifer
-- Spaltung
-- aktive Dekrete
-- drohende religiöse Krisen
+Status:
 
-### Stadt-Reiter „Glaubenspolitik“
+- `.modinfo` exists
+- text files exist
+- base SQL files exist
+- load test instructions exist
+- local test still pending
 
-Ein eigener Bereich im Stadtmenü für lokale Glaubensaktionen.
+### Phase 2 - First active faith mechanics
 
-### Glaubenskarte
+Goal: Make Faith more useful through existing Civ VI systems before custom UI work begins.
 
-Eine Kartenansicht, die religiöse Dynamik verständlicher macht:
+Status:
 
-- religiöse Drucklinien zwischen Städten
-- gefährdete Städte
-- starke Missionierungszentren
-- Handelsrouten mit religiösem Einfluss
-- religiöse Spannungsräume
+- 3 belief records exist
+- 2 policy records exist
+- English and German localization exist
+- 3 conservative effects are implemented
+- local SQL/load test still pending
 
-### Glaubensplaner
+### Later phases
 
-Hinweise und Warnungen wie:
+Planned future systems:
 
-- „Diese Stadt droht in wenigen Runden religiös zu kippen.“
-- „Ein Dekret ist wieder verfügbar.“
-- „Diese Handelsroute verbreitet fremden Glauben zurück in dein Reich.“
-- „Hohe Spaltung kann bald Loyalität kosten.“
-
----
-
-## Mögliche erste technische Umsetzung
-
-Da Civilization VI Modding bei UI und neuen Systemen Grenzen hat, sollte die Entwicklung in Phasen erfolgen.
-
-### Phase 1: Grundlage
-
-- Mod-Struktur anlegen
-- `.modinfo` erstellen
-- Basiskonfiguration für Civilization VI
-- Erste Texte und Lokalisierung
-- README und Design-Dokumentation
-
-### Phase 2: Balancing über bestehende Mechaniken
-
-- neue oder angepasste Glaubenssätze
-- neue Politikkarten
-- neue Gebäude- oder Bezirksboni
-- Glaubenskauf für zusätzliche Einheiten oder Gebäude
-- stärkere Verbindung von Glauben, Loyalität und Zufriedenheit
-
-### Phase 3: Aktive Fähigkeiten
-
-- Glaubensprojekte in Städten
-- wiederholbare Stadtprojekte mit Glaubenskosten
-- reichsweite Effekte über Policies, Projekte oder Dummy-Gebäude
-- erste Form von Dekreten über vorhandene Civ-Mechaniken
-
-### Phase 4: UI-Erweiterung
-
-- eigenes Panel oder Lua-UI-Erweiterung prüfen
-- Tooltips verbessern
-- Glaubensaktionen sichtbar machen
-- Zustände wie Eifer/Spaltung abstrahieren oder simulieren
-
-### Phase 5: Feinschliff
-
-- Balance testen
-- KI-Kompatibilität prüfen
-- Texte überarbeiten
-- Workshop-Beschreibung vorbereiten
-- Screenshots und Beispielstrategien ergänzen
+- city-based faith actions
+- empire-wide sacred decrees
+- Zeal and Schism as risk/reward systems
+- expanded religious unit roles
+- custom UI and faith overview
+- balance and Workshop release polish
 
 ---
 
-## Aktueller Status
-
-Dieses Repository ist der Startpunkt für das Projekt.
-
-Aktuell vorhanden:
-
-- Projektname
-- Grundkonzept
-- Designziele
-- erste Feature-Ideen
-- grober Entwicklungsplan
-
-Noch nicht vorhanden:
-
-- spielbare Mod-Dateien
-- `.modinfo`
-- SQL/XML/Lua-Dateien
-- Balancewerte
-- Workshop-Paket
-
----
-
-## Projektstruktur, geplant
+## Repository structure
 
 ```text
 Sacred-Dominion/
@@ -296,36 +142,85 @@ Sacred-Dominion/
 │   ├── Beliefs.sql
 │   ├── Policies.sql
 │   ├── Buildings.sql
-│   └── Projects.sql
-├── UI/
-│   └── SacredDominionPanel.lua
+│   ├── Projects.sql
+│   └── Modifiers.sql
 ├── Text/
 │   ├── en_US.xml
 │   └── de_DE.xml
 └── Docs/
+    ├── BALANCING.md
     ├── DESIGN.md
-    └── BALANCING.md
+    ├── LOAD_TEST.md
+    ├── LOCALIZATION.md
+    ├── PHASE1_STATUS.md
+    ├── PHASE2_MECHANICS.md
+    ├── PHASE2_MODIFIERS.md
+    ├── PHASE2_STATUS.md
+    ├── PHASE2_TEST.md
+    └── ROADMAP.md
 ```
 
 ---
 
-## Leitgedanke
+## Language policy
 
-Glauben soll in Sacred Dominion kein passiver Zähler sein.
+English is the source language.
 
-Er soll ein lebendiges Reichssystem werden:
+German is a complete translation, not an afterthought.
 
-- heilend oder spaltend
-- stabilisierend oder fanatisierend
-- kulturell, politisch und religiös nutzbar
-- stark, aber nicht kostenlos
+Gameplay-facing text keys follow this pattern:
 
-**Sacred Dominion** macht aus Glauben eine Ressource mit Seele, Zähnen und Verantwortung.
+```text
+LOC_SACRED_DOMINION_...
+```
+
+Localization files:
+
+```text
+Text/en_US.xml
+Text/de_DE.xml
+```
 
 ---
 
-## Hinweis
+## Local test notes
 
-Dieses Projekt ist ein inoffizielles Fan-Projekt für *Sid Meier’s Civilization VI*.
+Phase 1 and Phase 2 still need local Civilization VI validation.
 
-Civilization, Civilization VI und Sid Meier’s Civilization VI sind Marken ihrer jeweiligen Rechteinhaber. Dieses Projekt steht in keiner Verbindung zu Firaxis Games, 2K Games oder Take-Two Interactive.
+Useful documents:
+
+```text
+Docs/LOAD_TEST.md
+Docs/PHASE2_TEST.md
+```
+
+Important logs to check after loading the mod locally:
+
+```text
+Database.log
+Localization.log
+Modding.log
+Lua.log
+```
+
+---
+
+## Current technical caution
+
+The first Phase 2 effects are implemented, but not yet verified in a local Civ VI install.
+
+Before adding more complex systems, test that:
+
+- the mod appears in Additional Content
+- a new game starts
+- the new belief and policy records load
+- the new tooltips appear correctly
+- the first modifiers do not create database errors
+
+---
+
+## Fan project notice
+
+This is an unofficial fan project for *Sid Meier's Civilization VI*.
+
+Civilization, Civilization VI and Sid Meier's Civilization VI are trademarks of their respective owners. This project is not affiliated with Firaxis Games, 2K Games or Take-Two Interactive.
