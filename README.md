@@ -16,20 +16,16 @@ Heilige Herrschaft - Glauben neu gedacht
 
 | Area | Status |
 | --- | --- |
-| Phase 1 - Mod foundation | Ready for local load test |
-| Phase 2 - First active faith mechanics | Effect pass implemented, local test pending |
-| Phase 3 - City faith actions | First project pass implemented, local test pending |
-| Active gameplay effects | 5 Phase 2 effects and 4 Phase 3 city projects |
+| Phase 1 - Mod foundation | Implemented, local test skipped for now |
+| Phase 2 - First active faith mechanics | Implemented, local test skipped for now |
+| Phase 3 - City faith actions | Implemented, local test skipped for now |
+| Phase 4 - Sacred decrees | First policy-card pass implemented |
+| Active gameplay effects | Phase 2 effects, Phase 3 projects and Phase 4 decree policies |
 | Primary language | English |
 | German translation | Supported |
 | Custom UI | Not started |
-| Local Civ VI test | Pending |
 
-Phase 1 is structurally ready, but it is not marked as fully complete until the mod has been tested locally in Civilization VI.
-
-Phase 2 includes conservative gameplay modifiers for all five initial Phase 2 records.
-
-Phase 3 adds the first city-based faith actions as Holy Site projects.
+Phase 4 adds the first sacred decrees as special policy cards. This keeps the system playable without custom UI.
 
 ---
 
@@ -95,6 +91,35 @@ Phase 3 adds the first city-based faith actions as Holy Site projects.
 
 ---
 
+## Active Phase 4 decree policies
+
+### Declare Tithe
+
+**German:** Zehnt ausrufen  
+**Current effect:** Temples provide **+1 Gold** while this decree policy is slotted.
+
+### Holy Festivals
+
+**German:** Heilige Feste  
+**Current effect:** Temples provide **+1 Culture** while this decree policy is slotted.
+
+### Missionary Mandate
+
+**German:** Missionsmandat  
+**Current effect:** Shrines provide **+1 Faith** while this decree policy is slotted.
+
+### Mobilize Orders
+
+**German:** Orden mobilisieren  
+**Current effect:** Temples provide **+1 Faith** while this decree policy is slotted.
+
+### Wonder Veneration
+
+**German:** Wunderverehrung  
+**Current effect:** Temples provide **+1 Culture** while this decree policy is slotted.
+
+---
+
 ## Project goal
 
 Sacred Dominion makes Faith more active outside a pure religious victory path.
@@ -104,7 +129,8 @@ The design direction:
 - religious infrastructure should matter more
 - Faith should support economy, food, culture and empire management
 - city-level faith actions should become regular local decisions
-- deeper systems such as decrees, Zeal and Schism come later
+- decree policies should simulate empire-wide faith decisions until custom UI exists
+- deeper systems such as Zeal and Schism come later
 - custom UI comes after the gameplay foundation is stable
 
 ---
@@ -119,32 +145,19 @@ Docs/ROADMAP.md
 
 ### Phase 1 - Mod foundation
 
-Status:
-
-- `.modinfo` exists
-- text files exist
-- base SQL files exist
-- load test instructions exist
-- local test still pending
+Implemented. Local test skipped for now.
 
 ### Phase 2 - First active faith mechanics
 
-Status:
-
-- 3 belief records exist
-- 2 policy records exist
-- English and German localization exist
-- 5 conservative effects are implemented
-- local SQL/load test still pending
+Implemented with 3 belief records, 2 policy records and 5 conservative effects.
 
 ### Phase 3 - City faith actions
 
-Status:
+Implemented with 4 Holy Site city projects.
 
-- 4 Holy Site city projects exist
-- English and German localization exist
-- project yield conversions are implemented
-- local SQL/load test still pending
+### Phase 4 - Sacred decrees
+
+Implemented as first policy-card pass with 5 decree policies.
 
 ---
 
@@ -159,7 +172,8 @@ Sacred-Dominion/
 │   ├── Policies.sql
 │   ├── Buildings.sql
 │   ├── Projects.sql
-│   └── Modifiers.sql
+│   ├── Modifiers.sql
+│   └── Decrees.sql
 ├── Text/
 │   ├── en_US.xml
 │   └── de_DE.xml
@@ -176,6 +190,8 @@ Sacred-Dominion/
     ├── PHASE3_MECHANICS.md
     ├── PHASE3_STATUS.md
     ├── PHASE3_TEST.md
+    ├── PHASE4_MECHANICS.md
+    ├── PHASE4_STATUS.md
     └── ROADMAP.md
 ```
 
@@ -193,47 +209,10 @@ Gameplay-facing text keys follow this pattern:
 LOC_SACRED_DOMINION_...
 ```
 
-Localization files:
-
-```text
-Text/en_US.xml
-Text/de_DE.xml
-```
-
 ---
 
-## Local test notes
+## Technical caution
 
-Phase 1, Phase 2 and Phase 3 still need local Civilization VI validation.
+Phase 1 to 3 local tests are intentionally skipped for now.
 
-Useful documents:
-
-```text
-Docs/LOAD_TEST.md
-Docs/PHASE2_TEST.md
-Docs/PHASE3_TEST.md
-```
-
-Important logs to check after loading the mod locally:
-
-```text
-Database.log
-Localization.log
-Modding.log
-Lua.log
-```
-
----
-
-## Current technical caution
-
-Phase 3 project SQL is implemented, but not yet verified in a local Civ VI install.
-
-Before adding more complex systems, test that:
-
-- the mod appears in Additional Content
-- a new game starts
-- the Phase 2 belief and policy records load
-- the Phase 3 city projects appear in cities with Holy Sites
-- the new tooltips appear correctly
-- the first modifiers and projects do not create database errors
+Phase 4 is implemented conservatively, but the full mod still needs local Civilization VI validation before it should be considered stable.
