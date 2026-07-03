@@ -8,11 +8,11 @@ Goal: Add the first empire-wide faith decisions without custom UI.
 
 ## Progress
 
-**Overall progress:** 80%
+**Overall progress:** 90%
 
 ## Last completed step
 
-Implemented the first sacred decrees as policy cards, registered `Data/Decrees.sql`, updated localization, README and roadmap.
+Updated balancing notes, added `Docs/PHASE4_TEST.md`, and created Issue #7 as the later local test tracker for decree policies.
 
 ## Current checklist
 
@@ -23,6 +23,9 @@ Implemented the first sacred decrees as policy cards, registered `Data/Decrees.s
 - [x] localization checked
 - [x] README updated
 - [x] roadmap updated
+- [x] balancing notes updated
+- [x] Phase 4 test checklist created
+- [x] local test issue created
 - [ ] local Civ VI test passed
 
 ---
@@ -45,8 +48,26 @@ SacredDominion.modinfo
 Text/en_US.xml
 Text/de_DE.xml
 Docs/PHASE4_MECHANICS.md
+Docs/PHASE4_TEST.md
+Docs/BALANCING.md
 README.md
 Docs/ROADMAP.md
+```
+
+---
+
+## Test tracking
+
+Local test checklist:
+
+```text
+Docs/PHASE4_TEST.md
+```
+
+GitHub test tracker:
+
+```text
+Issue #7 - Test: Phase 4 Dekret-Politiken pruefen
 ```
 
 ---
